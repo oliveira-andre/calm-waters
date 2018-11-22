@@ -3,10 +3,10 @@ class CreateTanks < ActiveRecord::Migration[5.2]
     create_table :tanks do |t|
       t.references :user, foreign_key: true
       t.references :specie, foreign_key: true
-      t.int :population_date
-      t.int :initial_quantity
-      t.int :depopulation_date
-      t.int :final_quantity
+      t.integer :population_date
+      t.integer :initial_quantity
+      t.integer :depopulation_date
+      t.integer :final_quantity
 
       t.timestamps
     end
