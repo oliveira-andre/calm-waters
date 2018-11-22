@@ -13,4 +13,12 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require jquery.mask
+
+$(document).on("turbolinks:load", function () {
+    $(".cpf").mask("000.000.000-00", {reverse: true});
+
+    $(".btn-login").click(function () {
+        $(".cpf").unmask();
+    });
+});

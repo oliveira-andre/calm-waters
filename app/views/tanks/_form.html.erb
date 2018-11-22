@@ -1,18 +1,45 @@
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Criar Tanque</h1>
+          <p>Bootstrap default form components</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item"><a href="#">Form Components</a></li>
+        </ul>
+      </div>
+      <div class="tile">
+        <%= simple_form_for(@tank) do |f| %>
+          <div class="form-group">
+            <%= f.association :user, input_html: {class: "form-control"}, label: "Usuario" %>
+          </div>
 
-<%= simple_form_for(@tank) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <div class="form-group">
+            <%= f.association :specie, input_html: {class: "form-control"}, label: "Espécie" %>
+          </div>
 
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.association :specie %>
-    <%= f.input :population_date %>
-    <%= f.input :initial_quantity %>
-    <%= f.input :depopulation_date %>
-    <%= f.input :final_quantity %>
+          <div class="form-group">
+            <%= f.input :population_date, input_html: {class: "form-control"}, label: "Data do Povoamento" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :initial_quantity, input_html: {class: "form-control"}, label: "Quantidade Inicial" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :depopulation_date, input_html: {class: "form-control"}, label: "Data do Despovoamento" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :final_quantity, input_html: {class: "form-control"}, label: "Quantidade Final" %>
+          </div>
+        <% end %>
+      </div>
+
+    </main>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

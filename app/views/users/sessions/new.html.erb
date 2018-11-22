@@ -1,20 +1,34 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<body class="  pace-done" data-gr-c-s-loaded="true">
+<div class="pace  pace-inactive">
+  <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+    <div class="pace-progress-inner"></div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="pace-activity"></div>
+</div>
+<section class="material-half-bg">
+  <div class="cover"></div>
+</section>
+<section class="login-content">
+  <div class="logo">
+    <h1>Águas Calmas</h1>
   </div>
-<% end %>
+  <div class="login-box">
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login-form"}) do |f| %>
 
-<%= render "users/shared/links" %>
+      <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+      <div class="form-group">
+        <%= f.input :cpf, required: true, autofocus: true, input_html: {class: "form-control cpf", placeholder: "000.000.000-00"}, label: "CPF" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password, required: true, input_html: {class: "form-control", "min-lengh":"6", placeholder: "******"}, label: "Senha" %>
+      </div>
+      <div class="form-group btn-container">
+        <%= button_tag(type: "submit", class: "btn btn-primary btn-block btn-login") do %>
+          <i class="fa fa-sign-in fa-lg fa-fw"></i>
+          <span>Entrar</span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
+</body>

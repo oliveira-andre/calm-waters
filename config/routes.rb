@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :water_sensors
   resources :solo_sensors
   resources :monitoring_histories
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   resources :foods
   resources :food_types
   resources :ambiental_conditions
-  devise_for :users
-  
+
+    redirect("/users/sign_in")
+  authenticate :user do
+    root to: "tanks#index"
+  end
 end
