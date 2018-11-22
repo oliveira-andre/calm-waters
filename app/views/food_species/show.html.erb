@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @food_specy.food %>
+</p>
+
+<p>
+  <strong>Food quantity:</strong>
+  <%= @food_specy.food_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_food_specy_path(@food_specy) %> |
+<%= link_to 'Back', food_species_path %>

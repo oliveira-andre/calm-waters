@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  specie: one
+  population_date: 
+  initial_quantity: 
+  depopulation_date: 
+  final_quantity: 
+
+two:
+  user: two
+  specie: two
+  population_date: 
+  initial_quantity: 
+  depopulation_date: 
+  final_quantity: 

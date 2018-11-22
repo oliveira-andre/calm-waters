@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tank:</strong>
+  <%= @water_sensor.tank %>
+</p>
+
+<p>
+  <strong>Calcium:</strong>
+  <%= @water_sensor.calcium %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @water_sensor.ph %>
+</p>
+
+<p>
+  <strong>Phosphoror:</strong>
+  <%= @water_sensor.phosphoror %>
+</p>
+
+<p>
+  <strong>Hydrogen:</strong>
+  <%= @water_sensor.hydrogen %>
+</p>
+
+<p>
+  <strong>Oxigen:</strong>
+  <%= @water_sensor.oxigen %>
+</p>
+
+<p>
+  <strong>Acidity:</strong>
+  <%= @water_sensor.acidity %>
+</p>
+
+<%= link_to 'Edit', edit_water_sensor_path(@water_sensor) %> |
+<%= link_to 'Back', water_sensors_path %>

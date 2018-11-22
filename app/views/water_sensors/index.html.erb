@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Water Sensors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tank</th>
+      <th>Calcium</th>
+      <th>Ph</th>
+      <th>Phosphoror</th>
+      <th>Hydrogen</th>
+      <th>Oxigen</th>
+      <th>Acidity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @water_sensors.each do |water_sensor| %>
+      <tr>
+        <td><%= water_sensor.tank %></td>
+        <td><%= water_sensor.calcium %></td>
+        <td><%= water_sensor.ph %></td>
+        <td><%= water_sensor.phosphoror %></td>
+        <td><%= water_sensor.hydrogen %></td>
+        <td><%= water_sensor.oxigen %></td>
+        <td><%= water_sensor.acidity %></td>
+        <td><%= link_to 'Show', water_sensor %></td>
+        <td><%= link_to 'Edit', edit_water_sensor_path(water_sensor) %></td>
+        <td><%= link_to 'Destroy', water_sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Water Sensor', new_water_sensor_path %>

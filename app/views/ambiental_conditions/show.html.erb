@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ideal temperature:</strong>
+  <%= @ambiental_condition.ideal_temperature %>
+</p>
+
+<p>
+  <strong>Ideal oxigen:</strong>
+  <%= @ambiental_condition.ideal_oxigen %>
+</p>
+
+<p>
+  <strong>Ideal ph:</strong>
+  <%= @ambiental_condition.ideal_ph %>
+</p>
+
+<p>
+  <strong>Ideal ammonia:</strong>
+  <%= @ambiental_condition.ideal_ammonia %>
+</p>
+
+<p>
+  <strong>Ideal acidity:</strong>
+  <%= @ambiental_condition.ideal_acidity %>
+</p>
+
+<%= link_to 'Edit', edit_ambiental_condition_path(@ambiental_condition) %> |
+<%= link_to 'Back', ambiental_conditions_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @species.price %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @species.weight %>
+</p>
+
+<p>
+  <strong>Food specie:</strong>
+  <%= @species.food_specie %>
+</p>
+
+<p>
+  <strong>Ambiental condition:</strong>
+  <%= @species.ambiental_condition %>
+</p>
+
+<p>
+  <strong>Specie name:</strong>
+  <%= @species.specie_name %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @species.observation %>
+</p>
+
+<%= link_to 'Edit', edit_species_path(@species) %> |
+<%= link_to 'Back', species_path %>

@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@monitoring_history) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :tank %>
+    <%= f.input :monitoring_date %>
+    <%= f.input :ph %>
+    <%= f.input :oxigen %>
+    <%= f.input :liming %>
+    <%= f.input :quantity_fetilizing %>
+    <%= f.input :quantitiy_food_daily %>
+    <%= f.input :disease %>
+    <%= f.input :procedimentos %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

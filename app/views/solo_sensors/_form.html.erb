@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@solo_sensor) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :tank %>
+    <%= f.input :calcium %>
+    <%= f.input :ph %>
+    <%= f.input :phosphoror %>
+    <%= f.input :carbon %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tank:</strong>
+  <%= @monitoring_history.tank %>
+</p>
+
+<p>
+  <strong>Monitoring date:</strong>
+  <%= @monitoring_history.monitoring_date %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @monitoring_history.ph %>
+</p>
+
+<p>
+  <strong>Oxigen:</strong>
+  <%= @monitoring_history.oxigen %>
+</p>
+
+<p>
+  <strong>Liming:</strong>
+  <%= @monitoring_history.liming %>
+</p>
+
+<p>
+  <strong>Quantity fetilizing:</strong>
+  <%= @monitoring_history.quantity_fetilizing %>
+</p>
+
+<p>
+  <strong>Quantitiy food daily:</strong>
+  <%= @monitoring_history.quantitiy_food_daily %>
+</p>
+
+<p>
+  <strong>Disease:</strong>
+  <%= @monitoring_history.disease %>
+</p>
+
+<p>
+  <strong>Procedimentos:</strong>
+  <%= @monitoring_history.procedimentos %>
+</p>
+
+<%= link_to 'Edit', edit_monitoring_history_path(@monitoring_history) %> |
+<%= link_to 'Back', monitoring_histories_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food_type: one
+  name: MyString
+  composition: MyString
+  observation: MyString
+
+two:
+  food_type: two
+  name: MyString
+  composition: MyString
+  observation: MyString

@@ -1,0 +1,2 @@
+module SoloSensorsHelper
+end

@@ -1,0 +1,2 @@
+module AmbientalConditionsHelper
+end

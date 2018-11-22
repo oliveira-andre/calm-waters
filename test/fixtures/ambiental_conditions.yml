@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ideal_temperature: 
+  ideal_oxigen: 
+  ideal_ph: 
+  ideal_ammonia: 
+  ideal_acidity: 
+
+two:
+  ideal_temperature: 
+  ideal_oxigen: 
+  ideal_ph: 
+  ideal_ammonia: 
+  ideal_acidity: 

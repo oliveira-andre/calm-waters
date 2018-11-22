@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: MyString
+  weight: 9.99
+  food_specie: one
+  ambiental_condition: one
+  specie_name: MyString
+  observation: MyString
+
+two:
+  price: MyString
+  weight: 9.99
+  food_specie: two
+  ambiental_condition: two
+  specie_name: MyString
+  observation: MyString

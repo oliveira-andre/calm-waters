@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tank: one
+  monitoring_date: 
+  ph: MyString
+  oxigen: MyString
+  liming: 
+  quantity_fetilizing: 
+  quantitiy_food_daily: 
+  disease: MyString
+  procedimentos: MyString
+
+two:
+  tank: two
+  monitoring_date: 
+  ph: MyString
+  oxigen: MyString
+  liming: 
+  quantity_fetilizing: 
+  quantitiy_food_daily: 
+  disease: MyString
+  procedimentos: MyString

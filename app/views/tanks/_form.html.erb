@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@tank) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.association :specie %>
+    <%= f.input :population_date %>
+    <%= f.input :initial_quantity %>
+    <%= f.input :depopulation_date %>
+    <%= f.input :final_quantity %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Monitoring Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tank</th>
+      <th>Monitoring date</th>
+      <th>Ph</th>
+      <th>Oxigen</th>
+      <th>Liming</th>
+      <th>Quantity fetilizing</th>
+      <th>Quantitiy food daily</th>
+      <th>Disease</th>
+      <th>Procedimentos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monitoring_histories.each do |monitoring_history| %>
+      <tr>
+        <td><%= monitoring_history.tank %></td>
+        <td><%= monitoring_history.monitoring_date %></td>
+        <td><%= monitoring_history.ph %></td>
+        <td><%= monitoring_history.oxigen %></td>
+        <td><%= monitoring_history.liming %></td>
+        <td><%= monitoring_history.quantity_fetilizing %></td>
+        <td><%= monitoring_history.quantitiy_food_daily %></td>
+        <td><%= monitoring_history.disease %></td>
+        <td><%= monitoring_history.procedimentos %></td>
+        <td><%= link_to 'Show', monitoring_history %></td>
+        <td><%= link_to 'Edit', edit_monitoring_history_path(monitoring_history) %></td>
+        <td><%= link_to 'Destroy', monitoring_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monitoring History', new_monitoring_history_path %>

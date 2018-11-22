@@ -1,0 +1,2 @@
+class AmbientalCondition < ApplicationRecord
+end

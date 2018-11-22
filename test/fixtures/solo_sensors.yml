@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tank: one
+  calcium: MyString
+  ph: MyString
+  phosphoror: MyString
+  carbon: MyString
+
+two:
+  tank: two
+  calcium: MyString
+  ph: MyString
+  phosphoror: MyString
+  carbon: MyString
