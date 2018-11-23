@@ -9,21 +9,29 @@
   <ul class="app-menu" data-turbolinks="false">
     <li class="treeview">
       <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-laptop"></i>
+        <i class="app-menu__icon fa fa-shower"></i>
         <span class="app-menu__label">Tanques</span>
         <i class="treeview-indicator fa fa-angle-right"></i>
       </a>
       <ul class="treeview-menu">
-        <li><a class="treeview-item" href="/tanks"><i class="icon fa fa-circle-o"></i> Listar</a></li>
         <li>
-          <a class="treeview-item" href="/tanks/new" target="_blank" rel="noopener"><i class="icon fa fa-circle-o"></i>
-            Criar</a></li>
+          <a class="treeview-item" href="/tanks">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Listar</span>
+          </a>
+        </li>
+        <li>
+          <a class="treeview-item" href="/tanks/new">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Criar</span>
+          </a>
+        </li>
       </ul>
     </li>
 
     <li class="treeview">
       <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-edit"></i>
+        <i class="app-menu__icon fas fa fa fa-inbox"></i>
         <span class="app-menu__label">Ração</span>
         <i class="treeview-indicator fa fa-angle-right"></i>
       </a>
@@ -45,7 +53,7 @@
 
     <li class="treeview">
       <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-th-list"></i>
+        <i class="app-menu__icon fa fa fa-list-ul"></i>
         <span class="app-menu__label">Tipos de Ração</span>
         <i class="treeview-indicator fa fa-angle-right"></i></a>
       <ul class="treeview-menu">
@@ -79,6 +87,95 @@
         </li>
         <li>
           <a class="treeview-item" href="/food_species/new">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Criar</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="treeview">
+      <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa fa-th-large"></i>
+        <span class="app-menu__label">Espécies</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li>
+          <a class="treeview-item" href="/species">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Listar</span>
+          </a>
+        </li>
+        <li>
+          <a class="treeview-item" href="/species/new">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Criar</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li class="treeview">
+      <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa fa-area-chart"></i>
+        <span class="app-menu__label">Monitoramento</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li>
+          <a class="treeview-item" href="/monitoring_histories">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Listar</span>
+          </a>
+        </li>
+        <li>
+          <a class="treeview-item" href="/monitoring_histories/new">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Criar</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="treeview">
+      <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa-file-text"></i>
+        <span class="app-menu__label">Sensores de Solo</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li>
+          <a class="treeview-item" href="/solo_sensors">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Listar</span>
+          </a>
+        </li>
+        <li>
+          <a class="treeview-item" href="/solo_sensors/new">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Criar</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="treeview">
+      <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa fa-thermometer-three-quarters"></i>
+        <span class="app-menu__label">Sensores de Água</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li>
+          <a class="treeview-item" href="/water_sensors">
+            <i class="icon fa fa-circle-o"></i>
+            <span>Listar</span>
+          </a>
+        </li>
+        <li>
+          <a class="treeview-item" href="/water_sensors/new">
             <i class="icon fa fa-circle-o"></i>
             <span>Criar</span>
           </a>
