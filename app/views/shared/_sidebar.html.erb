@@ -1,9 +1,11 @@
 <aside class="app-sidebar" data-turbolinks="false">
   <div class="app-sidebar__user">
-    <img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+    <div style="font-size: 45px;">
+      <i class="fa fa-user"></i>
+    </div>
     <div>
-      <p class="app-sidebar__user-name">Olá bem vindo!</p>
-      <p class="app-sidebar__user-designation cpf"><%= current_user.cpf %></p>
+      <p class="app-sidebar__user-name" style="margin-left: 10px;"><%= current_user.name %></p>
+      <p class="app-sidebar__user-designation cpf" style="margin-left: 10px;"><%= current_user.cpf %></p>
     </div>
   </div>
   <ul class="app-menu" data-turbolinks="false">

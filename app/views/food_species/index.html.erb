@@ -18,8 +18,8 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>Food</th>
-            <th>Food quantity</th>
+            <th>Ração</th>
+            <th>Quantidade</th>
             <th colspan="3"></th>
           </tr>
           </thead>
@@ -29,9 +29,10 @@
             <tr>
               <td><%= food_specy.food %></td>
               <td><%= food_specy.food_quantity %></td>
-              <td><%= link_to 'Show', food_specy %></td>
-              <td><%= link_to 'Edit', edit_food_specy_path(food_specy) %></td>
-              <td><%= link_to 'Destroy', food_specy, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+              <td>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_food_specy_path(food_specy) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", food_specy, method: :delete, data: {confirm: 'Are you sure?'} %>
+              </td>
             </tr>
           <% end %>
           </tbody>

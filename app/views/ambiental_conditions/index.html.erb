@@ -18,11 +18,11 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>Ideal temperature</th>
-            <th>Ideal oxigen</th>
-            <th>Ideal ph</th>
-            <th>Ideal ammonia</th>
-            <th>Ideal acidity</th>
+            <th>Temperatura Ideal</th>
+            <th>Oxigenio Ideal</th>
+            <th>PH Ideal</th>
+            <th>Amonia Ideal</th>
+            <th>Acidez Ideal</th>
             <th colspan="3"></th>
           </tr>
           </thead>
@@ -35,9 +35,10 @@
               <td><%= ambiental_condition.ideal_ph %></td>
               <td><%= ambiental_condition.ideal_ammonia %></td>
               <td><%= ambiental_condition.ideal_acidity %></td>
-              <td><%= link_to 'Show', ambiental_condition %></td>
-              <td><%= link_to 'Edit', edit_ambiental_condition_path(ambiental_condition) %></td>
-              <td><%= link_to 'Destroy', ambiental_condition, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+              <td>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_ambiental_condition_path(ambiental_condition) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", ambiental_condition, method: :delete, data: {confirm: 'Are you sure?'} %>
+              </td>
             </tr>
           <% end %>
           </tbody>

@@ -45,9 +45,10 @@
               <% else %>
                 <td>-</td>
               <% end %>
-              <td><%= link_to 'Show', tank %></td>
-              <td><%= link_to 'Edit', edit_tank_path(tank) %></td>
-              <td><%= link_to 'Destroy', tank, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+              <td>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_tank_path(tank) %>
+                <%= link_to " <button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", tank, method: :delete, data: {confirm: 'Are you sure?'} %>
+              </td>
             </tr>
           <% end %>
           </tbody>

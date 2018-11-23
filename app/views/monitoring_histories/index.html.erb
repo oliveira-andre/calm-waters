@@ -18,14 +18,14 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>Tank</th>
-            <th>Monitoring date</th>
-            <th>Ph</th>
-            <th>Oxigen</th>
-            <th>Liming</th>
-            <th>Quantity fetilizing</th>
-            <th>Quantitiy food daily</th>
-            <th>Disease</th>
+            <th>Tanque</th>
+            <th>Data de Monitoramento</th>
+            <th>PH</th>
+            <th>Oxigênio</th>
+            <th>Colagem</th>
+            <th>Quantidade de Fertilizante</th>
+            <th>Quantidade de Comida Diária</th>
+            <th>Doenças</th>
             <th>Procedimentos</th>
             <th colspan="3"></th>
           </tr>
@@ -43,9 +43,10 @@
               <td><%= monitoring_history.quantitiy_food_daily %></td>
               <td><%= monitoring_history.disease %></td>
               <td><%= monitoring_history.procedimentos %></td>
-              <td><%= link_to 'Show', monitoring_history %></td>
-              <td><%= link_to 'Edit', edit_monitoring_history_path(monitoring_history) %></td>
-              <td><%= link_to 'Destroy', monitoring_history, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+              <td>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_monitoring_history_path(monitoring_history) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", monitoring_history, method: :delete, data: {confirm: 'Are you sure?'} %>
+              </td>
             </tr>
           <% end %>
           </tbody>
