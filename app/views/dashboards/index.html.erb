@@ -7,11 +7,43 @@
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item">tanques</li>
-          <li class="breadcrumb-item">
-            <a href="#" class="a_black">listar</a>
-          </li>
+          <li class="breadcrumb-item">Dashboard</li>
         </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-shower fa-3x"></i>
+            <div class="info">
+              <h4>Tanques</h4>
+              <p><b><%= Tank.all.length %></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small info coloured-icon"><i class="icon fas fa fa-inbox fa-3x"></i>
+            <div class="info">
+              <h4>Ração</h4>
+              <p><b><%= Food.all.length %></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-th-large fa-3x"></i>
+            <div class="info">
+              <h4>Espécies</h4>
+              <p><b><%= Specie.all.length %></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-database fa-3x"></i>
+            <div class="info">
+              <h4>Biomassa</h4>
+              <p><b><%= @biomassa %></b></p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <% @tanks.each do |tank| %>
