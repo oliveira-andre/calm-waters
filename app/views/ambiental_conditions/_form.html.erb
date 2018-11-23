@@ -1,17 +1,71 @@
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Criar Condição Ambiental</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Condição Ambiental</li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">cadastrar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tile">
+        <%= simple_form_for(@ambiental_condition) do |f| %>
 
-<%= simple_form_for(@ambiental_condition) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :ideal_temperature, input_html: {class: "form-control"}, label: "Temperatura Ideal", error: "Temperatura Ideal não pode ficar em branco" %>
+              </div>
+            </div>
+          </div>
 
-  <div class="form-inputs">
-    <%= f.input :ideal_temperature %>
-    <%= f.input :ideal_oxigen %>
-    <%= f.input :ideal_ph %>
-    <%= f.input :ideal_ammonia %>
-    <%= f.input :ideal_acidity %>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :ideal_oxigen, input_html: {class: "form-control"}, label: "Oxigênio Ideal", error: "Oxigênio Ideal não pode ficar em branco" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :ideal_ph, input_html: {class: "form-control"}, label: "PH Ideal", error: "PH Ideal não pode ficar em branco" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :ideal_ammonia, input_html: {class: "form-control"}, label: "Amônia Ideal", error: "Amônia Ideal não pode ficar em branco" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :ideal_acidity, input_html: {class: "form-control"}, label: "Acidez Ideal", error: "Acidez Ideal não pode ficar em branco" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= button_tag(type: "submit", class: "btn btn-primary") do %>
+                <i class="fa fa-save"></i>
+                <span>Salvar</span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </main>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

@@ -18,19 +18,19 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.association :user, input_html: {class: "form-control"}, label: "Usuario" %>
+                <%= f.association :user, input_html: {class: "form-control"}, label: "Usuario", error: "Usuario não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.association :specie, input_html: {class: "form-control"}, label: "Espécie" %>
+                <%= f.association :specie, input_html: {class: "form-control"}, label: "Espécie", error: "Espécie não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :tank_type, input_html: {class: "form-control"}, label: "Tipo do Tanque" %>
+                <%= f.input :tank_type, input_html: {class: "form-control"}, label: "Tipo do Tanque", error: "Tipo do Tanque não pode ficar em branco" %>
               </div>
             </div>
           </div>
@@ -39,25 +39,25 @@
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :population_date, input_html: {class: "form-control date", type: "text"}, label: "Data do Povoamento" %>
+                <%= f.input :population_date, input_html: {class: "form-control date", type: "text"}, label: "Data do Povoamento", error: "Data do Povoamento não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :initial_quantity, input_html: {class: "form-control"}, label: "Quantidade Inicial" %>
+                <%= f.input :initial_quantity, input_html: {class: "form-control"}, label: "Quantidade Inicial", error: "Quantidade Inicial não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :depopulation_date, input_html: {class: "form-control"}, label: "Data do Despovoamento" %>
+                <%= f.input :depopulation_date, input_html: {class: "form-control"}, label: "Data do Despovoamento", error: "Data do Despovoamento não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :final_quantity, input_html: {class: "form-control date", type: "text"}, label: "Quantidade Final" %>
+                <%= f.input :final_quantity, input_html: {class: "form-control date", type: "text"}, label: "Quantidade Final", error: "Quantidade Final não pode ficar em branco" %>
               </div>
             </div>
 

@@ -19,19 +19,19 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <%= f.association :tank, input_html: {class: "form-control"}, label: "Tanque" %>
+                <%= f.association :tank, input_html: {class: "form-control"}, label: "Tanque", error: "Tanque não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :calcium, input_html: {class: "form-control"}, label: "Cálcio" %>
+                <%= f.input :calcium, input_html: {class: "form-control"}, label: "Cálcio", error: "Cálcio não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :ph, input_html: {class: "form-control"}, label: "PH" %>
+                <%= f.input :ph, input_html: {class: "form-control"}, label: "PH", error: "PH não pode ficar em branco" %>
               </div>
             </div>
           </div>
@@ -39,25 +39,25 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :phosphoror, input_html: {class: "form-control"}, label: "Fósforo" %>
+                <%= f.input :phosphoror, input_html: {class: "form-control"}, label: "Fósforo", error: "Fósforo não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :hydrogen, input_html: {class: "form-control"}, label: "Hidrogênio" %>
+                <%= f.input :hydrogen, input_html: {class: "form-control"}, label: "Hidrogênio", error: "Hidrogênio não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :oxigen, input_html: {class: "form-control"}, label: "Oxigênio" %>
+                <%= f.input :oxigen, input_html: {class: "form-control"}, label: "Oxigênio", error: "Oxigênio não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :acidity, input_html: {class: "form-control"}, label: "Acidez" %>
+                <%= f.input :acidity, input_html: {class: "form-control"}, label: "Acidez", error: "Acidez não pode ficar em branco" %>
               </div>
             </div>
           </div>

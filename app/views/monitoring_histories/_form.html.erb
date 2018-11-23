@@ -19,19 +19,19 @@
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                <%= f.association :tank, input_html: {class: "form-control"}, label: "Tanque" %>
+                <%= f.association :tank, input_html: {class: "form-control"}, label: "Tanque", error: "Tanque não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-5">
               <div class="form-group">
-                <%= f.input :monitoring_date, input_html: {class: "form-control"}, label: "Data de Monitoramento" %>
+                <%= f.input :monitoring_date, input_html: {class: "form-control"}, label: "Data de Monitoramento", error: "Data de Monitoramento não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-2">
               <div class="form-group">
-                <%= f.input :ph, input_html: {class: "form-control"}, label: "PH" %>
+                <%= f.input :ph, input_html: {class: "form-control"}, label: "PH", error: "PH não pode ficar em branco" %>
               </div>
             </div>
           </div>
@@ -39,19 +39,19 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :oxigen, input_html: {class: "form-control"}, label: "Oxigênio" %>
+                <%= f.input :oxigen, input_html: {class: "form-control"}, label: "Oxigênio", error: "Oxigênio não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :liming, input_html: {class: "form-control"}, label: "Calagem" %>
+                <%= f.input :liming, input_html: {class: "form-control"}, label: "Calagem", error: "Colagem não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :quantity_fetilizing, input_html: {class: "form-control"}, label: "Quantidade de Fertilizante" %>
+                <%= f.input :quantity_fetilizing, input_html: {class: "form-control"}, label: "Quantidade de Fertilizante", error: "Quantidade de Fertilizante não pode ficar em branco" %>
               </div>
             </div>
           </div>
@@ -59,19 +59,19 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :quantitiy_food_daily, input_html: {class: "form-control"}, label: "Quantidade de Ração Diária" %>
+                <%= f.input :quantitiy_food_daily, input_html: {class: "form-control"}, label: "Quantidade de Ração Diária", error: "Quantidade de Ração Diária não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :disease, input_html: {class: "form-control"}, label: "Doenças" %>
+                <%= f.input :disease, input_html: {class: "form-control"}, label: "Doenças", error: "não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="form-group">
-                <%= f.input :procedimentos, input_html: {class: "form-control"}, label: "Procedimentos" %>
+                <%= f.input :procedimentos, input_html: {class: "form-control"}, label: "Procedimentos", error: "não pode ficar em branco" %>
               </div>
             </div>
           </div>

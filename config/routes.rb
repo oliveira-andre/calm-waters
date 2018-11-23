@@ -4,15 +4,17 @@ Rails.application.routes.draw do
   resources :solo_sensors
   resources :monitoring_histories
   resources :tanks
-  resources :species
   resources :food_species
   resources :foods
   resources :food_types
   resources :ambiental_conditions
-
+  resource :dashboards, only: :index
+  get "/species", to: "species#index"
+  get "/species/new", to: "species#new"
+  post "/species/new", to: "species#create"
   redirect("/users/sign_in")
 
   authenticate :user do
-    root to: "tanks#index"
+    root to: "dashboards#index"
   end
 end
