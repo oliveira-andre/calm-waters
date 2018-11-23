@@ -7,6 +7,7 @@ class CreateTanks < ActiveRecord::Migration[5.2]
       t.integer :initial_quantity
       t.integer :depopulation_date
       t.integer :final_quantity
+      t.string :tank_type
 
       t.timestamps
     end
