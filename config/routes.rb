@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :food_types
   resources :ambiental_conditions
 
-    redirect("/users/sign_in")
+  redirect("/users/sign_in")
+
   authenticate :user do
     root to: "tanks#index"
   end
