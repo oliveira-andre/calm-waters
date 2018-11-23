@@ -1,21 +1,91 @@
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Adicionar Dados Para o Monitoramento</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Monitoramento></li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">cadastrar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tile">
+        <%= simple_form_for(@monitoring_history) do |f| %>
 
-<%= simple_form_for(@monitoring_history) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <%= f.association :tank, input_html: {class: "form-control"}, label: "Tanque" %>
+              </div>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.association :tank %>
-    <%= f.input :monitoring_date %>
-    <%= f.input :ph %>
-    <%= f.input :oxigen %>
-    <%= f.input :liming %>
-    <%= f.input :quantity_fetilizing %>
-    <%= f.input :quantitiy_food_daily %>
-    <%= f.input :disease %>
-    <%= f.input :procedimentos %>
+            <div class="col-md-5">
+              <div class="form-group">
+                <%= f.input :monitoring_date, input_html: {class: "form-control"}, label: "Data de Monitoramento" %>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="form-group">
+                <%= f.input :ph, input_html: {class: "form-control"}, label: "PH" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :oxigen, input_html: {class: "form-control"}, label: "Oxigênio" %>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :liming, input_html: {class: "form-control"}, label: "Calagem" %>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :quantity_fetilizing, input_html: {class: "form-control"}, label: "Quantidade de Fertilizante" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :quantitiy_food_daily, input_html: {class: "form-control"}, label: "Quantidade de Ração Diária" %>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :disease, input_html: {class: "form-control"}, label: "Doenças" %>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <%= f.input :procedimentos, input_html: {class: "form-control"}, label: "Procedimentos" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= button_tag(type: "submit", class: "btn btn-primary pull-right") do %>
+                <i class="fa fa-save"></i>
+                <span>Salvar</span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </main>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

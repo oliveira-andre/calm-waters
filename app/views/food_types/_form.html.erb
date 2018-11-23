@@ -1,14 +1,48 @@
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Criar Tipos de Ração</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Tanques</li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">cadastrar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tile">
+        <%= simple_form_for(@food_type) do |f| %>
 
-<%= simple_form_for(@food_type) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.input :description, input_html: {class: "form-control"} , label: "Descrição" %>
+            </div>
+          </div>
 
-  <div class="form-inputs">
-    <%= f.input :description %>
-    <%= f.input :active %>
+          <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+              <b>Ativo?</b>
+              <div class="toggle-flip">
+                <label>
+                  <input type="checkbox" name="food_type[active]" id="food_type_active"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= button_tag(type: "submit", class: "btn btn-primary pull-right") do %>
+                <i class="fa fa-save"></i>
+                <span>Salvar</span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </main>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

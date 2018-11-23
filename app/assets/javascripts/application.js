@@ -1,24 +1,19 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, or any plugin's
-// vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file. JavaScript code in this file should be added after the last require_* statement.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require jquery.mask
 
 $(document).on("turbolinks:load", function () {
-    $(".cpf").mask("000.000.000-00", {reverse: true});
+    $(".date").datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR",
+        autoclose: true,
+        todayHighlight: true
+    });
 
+    $(".cpf").mask("000.000.000-00", {reverse: true});
     $(".btn-login").click(function () {
         $(".cpf").unmask();
     });
+
 });

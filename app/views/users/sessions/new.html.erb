@@ -15,7 +15,7 @@
   <div class="login-box">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login-form"}) do |f| %>
 
-      <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+      <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Login</h3>
       <div class="form-group">
         <%= f.input :cpf, required: true, autofocus: true, input_html: {class: "form-control cpf", placeholder: "000.000.000-00"}, label: "CPF" %>
       </div>
@@ -24,7 +24,7 @@
       </div>
       <div class="form-group btn-container">
         <%= button_tag(type: "submit", class: "btn btn-primary btn-block btn-login") do %>
-          <i class="fa fa-sign-in fa-lg fa-fw"></i>
+          <i class="fa fa-sign-in fa-lg fa-fw right"></i>
           <span>Entrar</span>
         <% end %>
       </div>

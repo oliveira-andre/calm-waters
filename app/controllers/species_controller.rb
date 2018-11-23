@@ -9,7 +9,7 @@ class SpeciesController < ApplicationController
 
   # GET /species/1
   # GET /species/1.json
-  def show
+  def show;
   end
 
   # GET /species/new
@@ -28,11 +28,11 @@ class SpeciesController < ApplicationController
 
     respond_to do |format|
       if @species.save
-        format.html { redirect_to @species, notice: 'Specie was successfully created.' }
-        format.json { render :show, status: :created, location: @species }
+        format.html {redirect_to @species, notice: 'Specie was successfully created.'}
+        format.json {render :show, status: :created, location: @species}
       else
-        format.html { render :new }
-        format.json { render json: @species.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @species.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +42,11 @@ class SpeciesController < ApplicationController
   def update
     respond_to do |format|
       if @species.update(species_params)
-        format.html { redirect_to @species, notice: 'Specie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @species }
+        format.html {redirect_to @species, notice: 'Specie was successfully updated.'}
+        format.json {render :show, status: :ok, location: @species}
       else
-        format.html { render :edit }
-        format.json { render json: @species.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @species.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,19 +56,20 @@ class SpeciesController < ApplicationController
   def destroy
     @species.destroy
     respond_to do |format|
-      format.html { redirect_to species_url, notice: 'Specie was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to species_url, notice: 'Specie was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_species
-      @species = Specie.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def species_params
-      params.require(:species).permit(:price, :weight, :food_specie_id, :ambiental_condition_id, :specie_name, :observation)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_species
+    @species = Specie.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def species_params
+    params.require(:species).permit(:price, :weight, :food_specie_id, :ambiental_condition_id, :specie_name, :observation)
+  end
 end
