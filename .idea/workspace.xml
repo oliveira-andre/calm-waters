@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/species_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/species_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/specie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/specie.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/tank.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/food_types/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_types/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/foods/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/foods/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/species/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/species/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/food_species/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_species/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/food_types/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_types/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/foods/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/foods/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/species/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tanks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -93,7 +81,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="3509" />
+          <entry key="erb" value="3910" />
           <entry key="js" value="137" />
           <entry key="rb" value="325" />
           <entry key="scss" value="33" />
@@ -102,14 +90,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="137" />
-          <entry key="RHTML" value="3509" />
+          <entry key="RHTML" value="3910" />
           <entry key="Ruby" value="325" />
           <entry key="SCSS" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="erb" value="19" />
+          <entry key="erb" value="34" />
           <entry key="js" value="2" />
           <entry key="rb" value="13" />
           <entry key="scss" value="1" />
@@ -118,7 +106,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="2" />
-          <entry key="RHTML" value="19" />
+          <entry key="RHTML" value="34" />
           <entry key="Ruby" value="13" />
           <entry key="SCSS" value="1" />
         </counts>
@@ -128,28 +116,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/solo_sensors/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="15" selection-end-column="24" />
+              <caret selection-end-line="17" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="15" selection-end-column="24" />
+              <caret selection-end-line="17" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/water_sensors/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/water_sensors/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="126">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -195,7 +183,6 @@
         <option value="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/tank.rb" />
-        <option value="$PROJECT_DIR$/app/views/tanks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/models/specie.rb" />
         <option value="$PROJECT_DIR$/app/views/species/new.html.erb" />
@@ -207,6 +194,15 @@
         <option value="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tanks/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_species/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_types/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/foods/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/species/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" />
       </list>
     </option>
   </component>
@@ -423,12 +419,12 @@
       <updated>1542912879550</updated>
       <workItem from="1542912880787" duration="8821000" />
       <workItem from="1542930365315" duration="2463000" />
-      <workItem from="1542941935343" duration="8291000" />
+      <workItem from="1542941935343" duration="8849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19575000" />
+    <option name="totallyTimeSpent" value="20133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -612,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tanks/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -695,10 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/water_sensors/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="746">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
@@ -709,10 +698,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/water_sensors/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state>
+          <caret selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_species/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_types/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tanks/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/solo_sensors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/water_sensors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
         </state>
       </provider>
     </entry>

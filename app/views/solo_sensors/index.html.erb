@@ -1,35 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Listar Sensores de Solo</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Sensores de Solo</li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">listar</a>
+          </li>
+        </ul>
+      </div>
 
-<h1>Solo Sensors</h1>
+      <div class="tile">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Tank</th>
+            <th>Calcium</th>
+            <th>Ph</th>
+            <th>Phosphoror</th>
+            <th>Carbon</th>
+            <th colspan="3"></th>
+          </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tank</th>
-      <th>Calcium</th>
-      <th>Ph</th>
-      <th>Phosphoror</th>
-      <th>Carbon</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @solo_sensors.each do |solo_sensor| %>
-      <tr>
-        <td><%= solo_sensor.tank %></td>
-        <td><%= solo_sensor.calcium %></td>
-        <td><%= solo_sensor.ph %></td>
-        <td><%= solo_sensor.phosphoror %></td>
-        <td><%= solo_sensor.carbon %></td>
-        <td><%= link_to 'Show', solo_sensor %></td>
-        <td><%= link_to 'Edit', edit_solo_sensor_path(solo_sensor) %></td>
-        <td><%= link_to 'Destroy', solo_sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Solo Sensor', new_solo_sensor_path %>
+          <tbody>
+          <% @solo_sensors.each do |solo_sensor| %>
+            <tr>
+              <td><%= solo_sensor.tank %></td>
+              <td><%= solo_sensor.calcium %></td>
+              <td><%= solo_sensor.ph %></td>
+              <td><%= solo_sensor.phosphoror %></td>
+              <td><%= solo_sensor.carbon %></td>
+              <td><%= link_to 'Show', solo_sensor %></td>
+              <td><%= link_to 'Edit', edit_solo_sensor_path(solo_sensor) %></td>
+              <td><%= link_to 'Destroy', solo_sensor, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>

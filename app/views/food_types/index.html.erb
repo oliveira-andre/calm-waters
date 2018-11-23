@@ -1,29 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Listar Tipos de Comida</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Tipos de Ração</li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">listar</a>
+          </li>
+        </ul>
+      </div>
 
-<h1>Food Types</h1>
+      <div class="tile">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Description</th>
+            <th>Active</th>
+            <th colspan="3"></th>
+          </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @food_types.each do |food_type| %>
-      <tr>
-        <td><%= food_type.description %></td>
-        <td><%= food_type.active %></td>
-        <td><%= link_to 'Show', food_type %></td>
-        <td><%= link_to 'Edit', edit_food_type_path(food_type) %></td>
-        <td><%= link_to 'Destroy', food_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Food Type', new_food_type_path %>
+          <tbody>
+          <% @food_types.each do |food_type| %>
+            <tr>
+              <td><%= food_type.description %></td>
+              <td><%= food_type.active %></td>
+              <td><%= link_to 'Show', food_type %></td>
+              <td><%= link_to 'Edit', edit_food_type_path(food_type) %></td>
+              <td><%= link_to 'Destroy', food_type, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
