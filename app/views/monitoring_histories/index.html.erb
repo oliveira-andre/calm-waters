@@ -44,8 +44,8 @@
               <td><%= monitoring_history.disease %></td>
               <td><%= monitoring_history.procedimentos %></td>
               <td>
-                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_monitoring_history_path(monitoring_history) %>
-                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", monitoring_history, method: :delete, data: {confirm: 'Are you sure?'} %>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>".html_safe, edit_monitoring_history_path(monitoring_history) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>".html_safe, monitoring_history, method: :delete, data: {confirm: 'Are you sure?'} %>
               </td>
             </tr>
           <% end %>

@@ -8,16 +8,16 @@ class SpeciesController < ApplicationController
   def show; end
 
   def new
-    @species = Specie.new
+    @specie = Specie.new
   end
 
   def edit; end
 
   def create
-    @species = Specie.new(species_params)
+    @specie = Specie.new(species_params)
 
     respond_to do |format|
-      if @species.save
+      if @specie.save
         format.html {redirect_to species_path}
         format.json {render :show, status: :created, location: @species}
       else
@@ -29,7 +29,7 @@ class SpeciesController < ApplicationController
 
   def update
     respond_to do |format|
-      if @species.update(species_params)
+      if @specie.update(species_params)
         format.html {redirect_to species_path}
         format.json {render :show, status: :ok, location: @species}
       else
@@ -40,7 +40,7 @@ class SpeciesController < ApplicationController
   end
 
   def destroy
-    @species.destroy
+    @specie.destroy
     respond_to do |format|
       format.html {redirect_to species_path}
       format.json {head :no_content}
@@ -50,10 +50,10 @@ class SpeciesController < ApplicationController
   private
 
   def set_species
-    @species = Specie.find(params[:id])
+    @specie = Specie.find(params[:id])
   end
 
   def species_params
-    params.require(:species).permit(:price, :weight, :food_specie_id, :ambiental_condition_id, :specie_name, :observation)
+    params.require(:specie).permit(:price, :weight, :food_specie_id, :ambiental_condition_id, :specie_name, :observation)
   end
 end

@@ -15,10 +15,10 @@
       </div>
 
       <% @tanks.each do |tank| %>
-        <div class="col-md4">
+        <div class="col-md-4">
           <div class="tile">
             <h3 class="tile-title">Aquário <%= tank.id %></h3>
-            <p><strong>Espécies:</strong> <%= tank.specie.name %></p>
+            <p><strong>Espécies:</strong> <%= tank.specie.specie_name %></p>
             <p><strong>Dia da População:</strong> <span class="date_mask"><%= tank.population_date %></span></p>
             <p><strong>População Inicial: </strong> <%= tank.initial_quantity %></p>
             <% if tank.depopulation_date %>
@@ -33,24 +33,3 @@
     </main>
   </div>
 </div>
-
-<!--<tr>-->
-<!--  <td><%#= tank.user %></td>-->
-<!--  <td><%#= tank.specie %></td>-->
-<!--  <td><%#= tank.population_date %></td>-->
-<!--  <td><%#= tank.initial_quantity %></td>-->
-<%# if tank.depopulation_date %>
-<!--    <td><%#= tank.depopulation_date %></td>-->
-<%# else %>
-<!--    <td>-</td>-->
-<%# end %>
-<%# if tank.depopulation_date %>
-<!--    <td><%#= tank.final_quantity %></td>-->
-<%# else %>
-<!--    <td>-</td>-->
-<%# end %>
-<!--  <td>-->
-<%#= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_tank_path(tank) %>
-<%#= link_to " <button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", tank, method: :delete, data: {confirm: 'Are you sure?'} %>
-<!--  </td>-->
-<!--</tr>-->

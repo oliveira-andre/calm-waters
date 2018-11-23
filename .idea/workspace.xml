@@ -4,22 +4,27 @@
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/food_species_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/food_species_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/species_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/species_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/ambiental_condition.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ambiental_condition.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/food_specie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/food_specie.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/food_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/food_type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/specie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/specie.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/dashboards/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboards/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/food_species/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_species/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/food_types/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_types/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/foods/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/foods/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/food_species/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/food_species/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/foods/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/foods/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/species/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/species/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tanks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -92,33 +97,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="6602" />
-          <entry key="js" value="180" />
-          <entry key="rb" value="839" />
+          <entry key="erb" value="6777" />
+          <entry key="js" value="248" />
+          <entry key="rb" value="1075" />
           <entry key="scss" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="180" />
-          <entry key="RHTML" value="6602" />
-          <entry key="Ruby" value="839" />
+          <entry key="JavaScript" value="248" />
+          <entry key="RHTML" value="6777" />
+          <entry key="Ruby" value="1075" />
           <entry key="SCSS" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="erb" value="69" />
+          <entry key="erb" value="89" />
           <entry key="js" value="6" />
-          <entry key="rb" value="32" />
+          <entry key="rb" value="49" />
           <entry key="scss" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="6" />
-          <entry key="RHTML" value="69" />
-          <entry key="Ruby" value="32" />
+          <entry key="RHTML" value="89" />
+          <entry key="Ruby" value="49" />
           <entry key="SCSS" value="3" />
         </counts>
       </usages-collector>
@@ -127,54 +132,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tanks/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+            <state relative-caret-position="560">
+              <caret line="40" column="145" selection-start-line="40" selection-start-column="145" selection-end-line="40" selection-end-column="145" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/models/food_specie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+            <state relative-caret-position="56">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tanks/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="59" column="153" selection-start-line="59" selection-start-column="153" selection-end-line="59" selection-end-column="153" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/species/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboards.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="494">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -182,20 +161,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#aside#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="774">
+              <caret line="207" column="62" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            <state relative-caret-position="228">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181122192630_create_species.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ambiental_condition.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/specie.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -219,57 +240,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/devise/sessions.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/tanks/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/vali-admin.js" />
         <option value="$PROJECT_DIR$/db/migrate/20181122193221_create_tanks.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/tank.rb" />
-        <option value="$PROJECT_DIR$/app/models/specie.rb" />
         <option value="$PROJECT_DIR$/app/views/species/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20181122190534_devise_create_users.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/food_species/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/foods/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/species/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/food_types/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/food_species_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/food_types_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/foods_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitoring_histories_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/solo_sensors_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/species_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tanks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/water_sensors_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_topbar.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/food_species/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/food_types/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/foods/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/monitoring_histories/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tanks/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb" />
+        <option value="$PROJECT_DIR$/app/models/food_type.rb" />
+        <option value="$PROJECT_DIR$/app/views/foods/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/solo_sensors/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tanks/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/water_sensors/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_species/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/food_species_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/food_species/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/food_specie.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/species_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/species/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/ambiental_condition.rb" />
+        <option value="$PROJECT_DIR$/app/views/species/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/models/specie.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/index.html.erb" />
       </list>
     </option>
   </component>
@@ -324,7 +345,7 @@
               <item name="calm_waters" type="b2602c69:ProjectViewProjectNode" />
               <item name="calm_waters" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="calm_waters" type="b2602c69:ProjectViewProjectNode" />
@@ -338,13 +359,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="dashboards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calm_waters" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calm_waters" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="species" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="calm_waters" type="b2602c69:ProjectViewProjectNode" />
@@ -499,12 +513,12 @@
       <workItem from="1542912880787" duration="8821000" />
       <workItem from="1542930365315" duration="2463000" />
       <workItem from="1542941935343" duration="10833000" />
-      <workItem from="1543005190088" duration="3252000" />
+      <workItem from="1543005190088" duration="5271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25369000" />
+    <option name="totallyTimeSpent" value="27388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -539,65 +553,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/vali-admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tanks/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181122193221_create_tanks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/tank.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181122192630_create_species.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/species/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/specie.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -619,14 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food_species/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="122" />
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -634,69 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="122" />
-          <caret line="37" column="126" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="122" />
-          <caret line="47" column="126" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/solo_sensors/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="122" />
-          <caret line="41" column="126" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/water_sensors/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food_types/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/food_species_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/foods_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -708,13 +596,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/solo_sensors_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/species_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
@@ -738,39 +619,10 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/dashboards.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="38" column="122" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="122" />
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="53" column="118" selection-start-line="53" selection-start-column="118" selection-end-line="53" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food_species/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="121" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/food_types/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="20" column="140" selection-start-line="20" selection-start-column="140" selection-end-line="20" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="42" column="119" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
         </state>
       </provider>
     </entry>
@@ -798,13 +650,6 @@
           <caret line="47" column="116" selection-start-line="47" selection-start-column="116" selection-end-line="47" selection-end-column="116" />
           <caret line="53" column="110" selection-start-line="53" selection-start-column="110" selection-end-line="53" selection-end-column="110" />
           <caret line="59" column="107" selection-start-line="59" selection-start-column="107" selection-end-line="59" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -843,40 +688,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#aside#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboards.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tanks/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+        <state relative-caret-position="266">
+          <caret line="19" column="148" selection-start-line="19" selection-start-column="148" selection-end-line="19" selection-end-column="148" />
         </state>
       </provider>
     </entry>
@@ -887,17 +705,201 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concerns/remove_special_characters.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="39" column="136" selection-start-line="39" selection-start-column="136" selection-end-line="39" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_types/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="37" column="136" selection-start-line="37" selection-start-column="136" selection-end-line="37" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/monitoring_histories/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="47" column="136" selection-start-line="47" selection-start-column="136" selection-end-line="47" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/solo_sensors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="39" column="136" selection-start-line="39" selection-start-column="136" selection-end-line="39" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tanks/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="49" column="137" selection-start-line="49" selection-start-column="137" selection-end-line="49" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/water_sensors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="44" column="137" selection-start-line="44" selection-start-column="137" selection-end-line="44" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/foods_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181122191408_create_food_species.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_species/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/food_species_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="42" column="119" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_species/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/species_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food_specie.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/species/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+        <state relative-caret-position="494">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="207" column="62" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/monitoring_history.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ambiental_condition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="40" column="145" selection-start-line="40" selection-start-column="145" selection-end-line="40" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181122192630_create_species.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/specie.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -41,8 +41,8 @@
               <td><%= water_sensor.acidity %></td>
               <td><%= link_to 'Show', water_sensor %></td>
               <td>
-                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_water_sensor_path(water_sensor) %>
-                <%= link_to " <button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", water_sensor, method: :delete, data: {confirm: 'Are you sure?'} %>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>".html_safe, edit_water_sensor_path(water_sensor) %>
+                <%= link_to " <button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>".html_safe, water_sensor, method: :delete, data: {confirm: 'Are you sure?'} %>
               </td>
             </tr>
           <% end %>

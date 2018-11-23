@@ -17,39 +17,31 @@
         <%= simple_form_for(@ambiental_condition) do |f| %>
 
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3">
               <div class="form-group">
                 <%= f.input :ideal_temperature, input_html: {class: "form-control"}, label: "Temperatura Ideal", error: "Temperatura Ideal não pode ficar em branco" %>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3">
               <div class="form-group">
                 <%= f.input :ideal_oxigen, input_html: {class: "form-control"}, label: "Oxigênio Ideal", error: "Oxigênio Ideal não pode ficar em branco" %>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2">
               <div class="form-group">
                 <%= f.input :ideal_ph, input_html: {class: "form-control"}, label: "PH Ideal", error: "PH Ideal não pode ficar em branco" %>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2">
               <div class="form-group">
                 <%= f.input :ideal_ammonia, input_html: {class: "form-control"}, label: "Amônia Ideal", error: "Amônia Ideal não pode ficar em branco" %>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2">
               <div class="form-group">
                 <%= f.input :ideal_acidity, input_html: {class: "form-control"}, label: "Acidez Ideal", error: "Acidez Ideal não pode ficar em branco" %>
               </div>

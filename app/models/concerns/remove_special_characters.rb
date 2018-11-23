@@ -12,4 +12,8 @@ module RemoveSpecialCharacters
   def depopulation_date=(value)
     super(value.gsub(/[^\w]/, '')) unless value.blank?
   end
+
+  def price=(value)
+    super(value.gsub(/[^\w]/, '')) unless value.blank?
+  end
 end

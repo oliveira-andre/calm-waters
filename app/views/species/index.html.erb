@@ -38,8 +38,8 @@
               <td><%= species.specie_name %></td>
               <td><%= species.observation %></td>
               <td>
-                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_species_path(species) %>
-                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", species, method: :delete, data: {confirm: 'Are you sure?'} %>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>".html_safe, edit_species_path(species) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>".html_safe, species, method: :delete, data: {confirm: 'Are you sure?'} %>
               </td>
             </tr>
           <% end %>

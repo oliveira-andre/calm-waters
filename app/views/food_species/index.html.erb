@@ -27,11 +27,11 @@
           <tbody>
           <% @food_species.each do |food_specy| %>
             <tr>
-              <td><%= food_specy.food %></td>
+              <td><%= food_specy.food.name %></td>
               <td><%= food_specy.food_quantity %></td>
               <td>
-                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>", edit_food_specy_path(food_specy) %>
-                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>", food_specy, method: :delete, data: {confirm: 'Are you sure?'} %>
+                <%= link_to "<button class='btn btn-outline-info'><i class='fa fa-edit'></i><span> Editar</span></button>".html_safe, edit_food_specy_path(food_specy) %>
+                <%= link_to "<button class='btn btn-outline-danger'><i class='fa fa-trash'></i><span> Excluir</span></button>".html_safe, food_specy, method: :delete, data: {confirm: 'Are you sure?'} %>
               </td>
             </tr>
           <% end %>

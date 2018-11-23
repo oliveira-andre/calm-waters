@@ -15,7 +15,7 @@
         </ul>
       </div>
       <div class="tile">
-        <%= simple_form_for(@species) do |f| %>
+        <%= simple_form_for(@specie) do |f| %>
 
           <div class="row">
             <div class="col-md-6">
@@ -26,7 +26,7 @@
 
             <div class="col-md-3">
               <div class="form-group">
-                <%= f.input :price, input_html: {class: "form-control"}, label: "Preço", error: "Preço não pode ficar em branco" %>
+                <%= f.input :price, input_html: {class: "form-control money", placeholder: "R$"}, label: "Preço", error: "Preço não pode ficar em branco" %>
               </div>
             </div>
 
@@ -40,13 +40,13 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <%= f.input :food_specie, input_html: {class: "form-control"}, label: "Ração da Espécie", error: "Ração da Espécie não pode ficar em branco" %>
+                <%= f.association :food_specie, input_html: {class: "form-control"}, label: "Ração da Espécie", error: "Ração da Espécie não pode ficar em branco" %>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
-                <%= f.input :ambiental_condition, input_html: {class: "form-control"}, label: "Condição Ambiental", error: "Condição Ambiental não pode ficar em branco" %>
+                <%= f.association :ambiental_condition, input_html: {class: "form-control"}, label: "Condição Ambiental", error: "Condição Ambiental não pode ficar em branco" %>
               </div>
             </div>
           </div>

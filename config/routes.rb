@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resource :dashboards, only: :index
   get "/species", to: "species#index"
   get "/species/new", to: "species#new"
-  post "/species/new", to: "species#create"
+  get "/species/edit/:id", to: "species#edit"
+  post "/species", to: "species#create", as: "edit_species"
   redirect("/users/sign_in")
 
   authenticate :user do

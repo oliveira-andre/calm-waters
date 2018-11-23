@@ -55,6 +55,6 @@ class FoodSpeciesController < ApplicationController
   end
 
   def food_specy_params
-    params.require(:food_specy).permit(:food_id, :food_quantity)
+    params.require(:food_specie).permit(:food_id, :food_quantity)
   end
 end
