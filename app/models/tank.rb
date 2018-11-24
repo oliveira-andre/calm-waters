@@ -6,4 +6,8 @@ class Tank < ApplicationRecord
 
   validates :population_date, presence: true
   validates :initial_quantity, presence: true
+
+  def to_s
+    tank_type
+  end
 end

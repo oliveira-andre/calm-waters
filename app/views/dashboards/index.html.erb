@@ -48,7 +48,7 @@
 
       <% @tanks.each do |tank| %>
         <div class="col-md-4">
-          <div class="tile">
+          <div class="tile" style="background-color: #B4CDCD;">
             <h3 class="tile-title">Aquário <%= tank.id %></h3>
             <p><strong>Espécies:</strong> <%= tank.specie.specie_name %></p>
             <p><strong>Dia da População:</strong> <span class="date_mask"><%= tank.population_date %></span></p>
