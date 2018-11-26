@@ -1,24 +1,23 @@
-# README
+# Calm Waters
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### commit explanation
 
-Things you may want to cover:
+features
 
-* Ruby version
+|        action        |       emoji       |
+|:--------------------:|:-----------------:|
+| adding something new | :heavy_plus_sign: |
+|    fixing_a_bug      |      :bug:        |
+|    new_issue         |       :x:         |
+|    fix_issue         |    :ok_hand:      |
 
-* System dependencies
 
-* Configuration
+```
+    all message - feature
+```
 
-* Database creation
+example
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+    making a resource by hand in species :bug:
+```
