@@ -11,7 +11,7 @@ $(document).on("turbolinks:load", function () {
         todayHighlight: true
     });
 
-    $(".money").maskMoney({prefix: "R$", thousands: ".", decimal: ","});
+    $('.money').maskMoney({prefix: 'R$', thousands: '.', decimal: ','}).trigger("mask.maskMoney");
 
     $(".date_mask").mask("00/00/0000");
     $(".cpf").mask("000.000.000-00", {reverse: true});

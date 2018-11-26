@@ -35,7 +35,7 @@
               <td><%= food.observation %></td>
               <td>
                 <%= link_to "<i class='fa fa-edit'></i><span> Editar</span>".html_safe, edit_food_path(food), class: "btn btn-outline-primary" %>
-                <%= link_to "<i class='fa fa-trash'></i><span> Excluir</span>".html_safe, food, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-outline-danger" %>
+                <%= link_to "<i class='fa fa-trash'></i><span> Excluir</span>".html_safe, food, method: :delete, data: {confirm: "Você tem certeza?"}, class: "btn btn-outline-danger" %>
               </td>
             </tr>
           <% end %>
