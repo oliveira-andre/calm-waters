@@ -24,10 +24,13 @@
   </head>
 
   <body class="app sidebar-mini rtl  pace-done" data-gr-c-s-loaded="true">
-  <% if user_signed_in? %>
-    <%= render "shared/topbar" %>
-    <%= render "shared/sidebar" %>
-  <% end %>
+    <div class="notification">
+      <%= flash_message %>
+    </div>
+    <% if user_signed_in? %>
+      <%= render "shared/topbar" %>
+      <%= render "shared/sidebar" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
