@@ -31,12 +31,12 @@
           <tbody>
           <% @tanks.each do |tank| %>
             <tr>
-              <td><%= tank.user %></td>
+              <td class="cpf"><%= tank.user %></td>
               <td><%= tank.specie %></td>
-              <td><%= tank.population_date %></td>
+              <td class="date_mask"><%= tank.population_date %></td>
               <td><%= tank.initial_quantity %></td>
               <% if tank.depopulation_date %>
-                <td><%= tank.depopulation_date %></td>
+                <td class="date_mask"><%= tank.depopulation_date %></td>
               <% else %>
                 <td>-</td>
               <% end %>
