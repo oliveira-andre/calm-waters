@@ -18,9 +18,11 @@ class SoloSensorsController < ApplicationController
 
     respond_to do |format|
       if @solo_sensor.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to solo_sensors_path}
         format.json {render :show, status: :created, location: @solo_sensor}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @solo_sensor.errors, status: :unprocessable_entity}
       end
@@ -30,9 +32,11 @@ class SoloSensorsController < ApplicationController
   def update
     respond_to do |format|
       if @solo_sensor.update(solo_sensor_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to solo_sensors_path}
         format.json {render :show, status: :ok, location: @solo_sensor}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @solo_sensor.errors, status: :unprocessable_entity}
       end
@@ -40,10 +44,16 @@ class SoloSensorsController < ApplicationController
   end
 
   def destroy
-    @solo_sensor.destroy
     respond_to do |format|
-      format.html {redirect_to solo_sensors_path}
-      format.json {head :no_content}
+      if @solo_sensor.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to solo_sensors_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to solo_sensors_path}
+        format.json {head :no_content}
+      end
     end
   end
 

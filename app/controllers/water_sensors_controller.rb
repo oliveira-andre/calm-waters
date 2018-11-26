@@ -5,13 +5,15 @@ class WaterSensorsController < ApplicationController
     @water_sensors = WaterSensor.all
   end
 
-  def show; end
+  def show;
+  end
 
   def new
     @water_sensor = WaterSensor.new
   end
 
-  def edit; end
+  def edit;
+  end
 
   def create
     @water_sensor = WaterSensor.new(water_sensor_params)
@@ -40,10 +42,16 @@ class WaterSensorsController < ApplicationController
   end
 
   def destroy
-    @water_sensor.destroy
     respond_to do |format|
-      format.html {redirect_to water_sensors_path}
-      format.json {head :no_content}
+      if @water_sensor.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to water_sensors_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to water_sensors_path}
+        format.json {head :no_content}
+      end
     end
   end
 

@@ -7,7 +7,6 @@ class FoodSpeciesController < ApplicationController
 
   def show; end
 
-  # GET /food_species/new
   def new
     @food_specy = FoodSpecie.new
   end
@@ -19,9 +18,11 @@ class FoodSpeciesController < ApplicationController
 
     respond_to do |format|
       if @food_specy.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to food_species_path}
         format.json {render :show, status: :created, location: @food_specy}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @food_specy.errors, status: :unprocessable_entity}
       end
@@ -31,9 +32,11 @@ class FoodSpeciesController < ApplicationController
   def update
     respond_to do |format|
       if @food_specy.update(food_specy_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to food_species_path}
         format.json {render :show, status: :ok, location: @food_specy}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @food_specy.errors, status: :unprocessable_entity}
       end
@@ -41,10 +44,16 @@ class FoodSpeciesController < ApplicationController
   end
 
   def destroy
-    @food_specy.destroy
     respond_to do |format|
-      format.html {redirect_to food_species_path}
-      format.json {head :no_content}
+      if @food_specy.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to food_species_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to food_species_path}
+        format.json {head :no_content}
+      end
     end
   end
 

@@ -18,9 +18,11 @@ class FoodTypesController < ApplicationController
 
     respond_to do |format|
       if @food_type.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to food_types_path}
         format.json {render :show, status: :created, location: @food_type}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @food_type.errors, status: :unprocessable_entity}
       end
@@ -30,10 +32,11 @@ class FoodTypesController < ApplicationController
   def update
     respond_to do |format|
       if @food_type.update(food_type_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to food_types_path}
         format.json {render :show, status: :ok, location: @food_type}
-        format.json {render :show, status: :ok, location: @food_type}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @food_type.errors, status: :unprocessable_entity}
       end
@@ -41,10 +44,15 @@ class FoodTypesController < ApplicationController
   end
 
   def destroy
-    @food_type.destroy
     respond_to do |format|
-      format.html {redirect_to food_types_path}
-      format.json {head :no_content}
+      if @food_type.destroy
+        flash[:success] = "Excluído com suceeso"
+        format.html {redirect_to food_types_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to food_types_path}
+      end
     end
   end
 
@@ -57,4 +65,5 @@ class FoodTypesController < ApplicationController
   def food_type_params
     params.require(:food_type).permit(:description, :active)
   end
+
 end

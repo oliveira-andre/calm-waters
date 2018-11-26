@@ -4,6 +4,6 @@ class DashboardsController < ApplicationController
     @biomassa = 0
     Specie.all.each do |specie|
       @biomassa += specie.weight
-    end 
+    end
   end
 end

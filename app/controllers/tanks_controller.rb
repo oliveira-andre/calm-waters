@@ -18,9 +18,11 @@ class TanksController < ApplicationController
 
     respond_to do |format|
       if @tank.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to tanks_path}
         format.json {render :show, status: :created, location: @tank}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @tank.errors, status: :unprocessable_entity}
       end
@@ -30,9 +32,11 @@ class TanksController < ApplicationController
   def update
     respond_to do |format|
       if @tank.update(tank_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to tanks_path}
         format.json {render :show, status: :ok, location: @tank}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @tank.errors, status: :unprocessable_entity}
       end
@@ -40,10 +44,16 @@ class TanksController < ApplicationController
   end
 
   def destroy
-    @tank.destroy
     respond_to do |format|
-      format.html {redirect_to tanks_path}
-      format.json {head :no_content}
+      if @tank.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to tanks_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to tanks_path}
+        format.json {head :no_content}
+      end
     end
   end
 

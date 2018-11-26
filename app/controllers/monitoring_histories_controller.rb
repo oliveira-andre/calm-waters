@@ -18,9 +18,11 @@ class MonitoringHistoriesController < ApplicationController
 
     respond_to do |format|
       if @monitoring_history.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to monitoring_histories_path}
         format.json {render :show, status: :created, location: @monitoring_history}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @monitoring_history.errors, status: :unprocessable_entity}
       end
@@ -30,9 +32,11 @@ class MonitoringHistoriesController < ApplicationController
   def update
     respond_to do |format|
       if @monitoring_history.update(monitoring_history_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to monitoring_histories_path}
         format.json {render :show, status: :ok, location: @monitoring_history}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @monitoring_history.errors, status: :unprocessable_entity}
       end
@@ -40,10 +44,16 @@ class MonitoringHistoriesController < ApplicationController
   end
 
   def destroy
-    @monitoring_history.destroy
     respond_to do |format|
-      format.html {redirect_to monitoring_histories_path}
-      format.json {head :no_content}
+      if @monitoring_history.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to monitoring_histories_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to monitoring_histories_path}
+        format.json {head :no_content}
+      end
     end
   end
 

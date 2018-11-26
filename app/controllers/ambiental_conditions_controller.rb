@@ -18,9 +18,11 @@ class AmbientalConditionsController < ApplicationController
 
     respond_to do |format|
       if @ambiental_condition.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to ambiental_conditions_path}
         format.json {render :show, status: :created, location: @ambiental_condition}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @ambiental_condition.errors, status: :unprocessable_entity}
       end
@@ -30,9 +32,11 @@ class AmbientalConditionsController < ApplicationController
   def update
     respond_to do |format|
       if @ambiental_condition.update(ambiental_condition_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to ambiental_conditions_path}
         format.json {render :show, status: :ok, location: @ambiental_condition}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @ambiental_condition.errors, status: :unprocessable_entity}
       end
@@ -40,10 +44,17 @@ class AmbientalConditionsController < ApplicationController
   end
 
   def destroy
-    @ambiental_condition.destroy
     respond_to do |format|
-      format.html {redirect_to ambiental_conditions_path}
-      format.json {head :no_content}
+
+      if @ambiental_condition.destroy
+        flash[:success] = "Excluído com sucesso"
+        format.html {redirect_to ambiental_conditions_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to ambiental_conditions_path}
+        format.json {head :no_content}
+      end
     end
   end
 

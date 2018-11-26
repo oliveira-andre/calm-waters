@@ -18,9 +18,11 @@ class FoodsController < ApplicationController
 
     respond_to do |format|
       if @food.save
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to foods_path}
         format.json {render :show, status: :created, location: @food}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :new}
         format.json {render json: @food.errors, status: :unprocessable_entity}
       end
@@ -30,9 +32,11 @@ class FoodsController < ApplicationController
   def update
     respond_to do |format|
       if @food.update(food_params)
+        flash[:success] = "Editado com sucesso"
         format.html {redirect_to foods_path}
         format.json {render :show, status: :ok, location: @food}
       else
+        flash[:error] = "Verifique os campos"
         format.html {render :edit}
         format.json {render json: @food.errors, status: :unprocessable_entity}
       end
@@ -40,10 +44,16 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food.destroy
     respond_to do |format|
-      format.html {redirect_to foods_path}
-      format.json {head :no_content}
+      if @food.destroy
+        flash[:success] = "Excuído com sucesso"
+        format.html {redirect_to foods_path}
+        format.json {head :no_content}
+      else
+        flash[:error] = "Está relacionado em outra tabela"
+        format.html {redirect_to foods_path}
+        format.json {head :no_content}
+      end
     end
   end
 
