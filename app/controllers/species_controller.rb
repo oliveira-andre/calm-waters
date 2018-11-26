@@ -5,11 +5,11 @@ class SpeciesController < ApplicationController
     @species = Specie.all
   end
 
-  def show; end
-
   def new
     @specie = Specie.new
   end
+
+  def show; end
 
   def edit; end
 
