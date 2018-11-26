@@ -14,6 +14,6 @@ module RemoveSpecialCharacters
   end
 
   def price=(value)
-    super(value.gsub(/[^\w]/, '')) unless value.blank?
+    super(value.gsub(/[R$ . ,]/, '')) unless value.blank?
   end
 end
