@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_194307) do
+ActiveRecord::Schema.define(version: 2018_11_26_025642) do
 
   create_table "ambiental_conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "ideal_temperature"
@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(version: 2018_11_22_194307) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tank_id"], name: "index_monitoring_histories_on_tank_id"
+  end
+
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "message"
+    t.string "type_message"
+    t.bigint "tank_id"
+    t.boolean "viewed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tank_id"], name: "index_notifications_on_tank_id"
   end
 
   create_table "solo_sensors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -131,6 +141,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_194307) do
   add_foreign_key "food_species", "foods"
   add_foreign_key "foods", "food_types"
   add_foreign_key "monitoring_histories", "tanks"
+  add_foreign_key "notifications", "tanks"
   add_foreign_key "solo_sensors", "tanks"
   add_foreign_key "species", "ambiental_conditions"
   add_foreign_key "species", "food_species", column: "food_specie_id"
