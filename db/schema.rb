@@ -105,6 +105,11 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.integer "depopulation_date"
     t.integer "final_quantity"
     t.string "tank_type"
+    t.integer "acidity"
+    t.integer "temperature"
+    t.integer "oxigen"
+    t.integer "ammonia"
+    t.integer "ph"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["specie_id"], name: "index_tanks_on_specie_id"

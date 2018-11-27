@@ -19,6 +19,11 @@ $(document).on("turbolinks:load", function () {
         $(".cpf").unmask();
     });
 
+    // create notifications every 5 seconds
+    setTimeout(function(){
+        checkValues();
+     }, 5000);
+
     //notification
     for (var i = 0 ; i < notification_class.length; i++) {
         notification_class[i].addEventListener("click", notificationDismiss);
@@ -56,4 +61,8 @@ function notificationDismiss(){
         notification_class[i].style.animation = '';
     }
 
+}
+
+function checkValues(){
+    $.ajax
 }

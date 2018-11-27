@@ -64,6 +64,6 @@ class TanksController < ApplicationController
   end
 
   def tank_params
-    params.require(:tank).permit(:user_id, :specie_id, :population_date, :initial_quantity, :depopulation_date, :final_quantity, :tank_type)
+    params.require(:tank).permit(:user_id, :specie_id, :population_date, :initial_quantity, :depopulation_date, :final_quantity, :tank_type, :temperature, :oxigen, :ph, :ammonia, :acidity)
   end
 end
