@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   post "/tanks/find_date", to: "tanks#find_date"
   post "/ambiental_conditions/calc", to: "ambiental_conditions#calculate"
   post "/notifications/update_view/:id", to: "notifications#update_view"
+  post "/dashboards/ambiental_condition_values", to: "dashboards#get_ambiental_condition_values"
+  post "/dashboards/tank_values", to: "dashboards#get_tank_values"
+  post "/dashboards/ambiental_and_tank_values", to: "dashboards#get_difference_between_ambiental_condition_and_tank_values"
   redirect("/users/sign_in")
 
   authenticate :user do
