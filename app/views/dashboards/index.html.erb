@@ -58,10 +58,38 @@
             <% end %>
             <% if tank.final_quantity %>
               <p><strong>Quantidade Final: </strong> <%= tank.final_quantity %></p>
-          <% end %>
+            <% end %>
           </div>
         </div>
       <% end %>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body">
+            <canvas id="polar_area_chart"></canvas>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-body">
+            <canvas id="radar_chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-6">
+          <div class="card card-body">
+            <canvas id="line_chart"></canvas>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-body">
+            <canvas id="pie_chart"></canvas>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </div>
