@@ -57,6 +57,16 @@ class TanksController < ApplicationController
     end
   end
 
+  def find_date
+    tanks = Tank.all
+    tanks.each do |tank|
+      date = Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - tank.updated_at.strftime('%d%m%Y').to_i
+      if date != 0
+        Notification.create(message: "Você está a um dia ou mais sem editar o tanque", type_message: "warning", tank_id: tank.id)  
+      end
+    end
+  end    
+
   private
 
   def set_tank

@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   post "/species", to: "species#create"
   patch "/species.:id", to: "species#update"
   delete "/species.:id", to: "species#destroy"
-  get "/ambiental_conditions/calc", to: "ambiental_conditions#calculate"
+  post "/tanks/find_date", to: "tanks#find_date"
+  post "/ambiental_conditions/calc", to: "ambiental_conditions#calculate"
   redirect("/users/sign_in")
 
   authenticate :user do
