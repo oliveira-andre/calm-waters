@@ -20,5 +20,5 @@ test:
 production:
   <<: *default
   database: calm_waters_production
-  username: calm_waters
-  password: <%= ENV['CALM_WATERS_DATABASE_PASSWORD'] %>
+  username: root
+  password: root
