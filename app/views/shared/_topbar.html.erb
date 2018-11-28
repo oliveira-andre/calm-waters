@@ -10,54 +10,72 @@
     <li class="dropdown">
       <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
       <ul class="app-notification dropdown-menu dropdown-menu-right">
-        <li class="app-notification__title">You have 4 new notifications.</li>
-        <div class="app-notification__content">
-          <li>
-            <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
-              <div>
-                <p class="app-notification__message">Lisa sent you a mail</p>
-                <p class="app-notification__meta">2 min ago</p>
-              </div>
-            </a></li>
-          <li>
-            <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
-              <div>
-                <p class="app-notification__message">Mail server not working</p>
-                <p class="app-notification__meta">5 min ago</p>
-              </div>
-            </a></li>
-          <li>
-            <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
-              <div>
-                <p class="app-notification__message">Transaction complete</p>
-                <p class="app-notification__meta">2 days ago</p>
-              </div>
-            </a></li>
+        <% if @notifications.nil? %>
           <div class="app-notification__content">
             <li>
-              <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+              <a class="app-notification__item" href="javascript:;">
+                <span class="app-notification__icon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x text-success">
+                    </i><i class="fa fa-eye fa-stack-1x fa-inverse"></i>
+                  </span>
+                </span>
                 <div>
-                  <p class="app-notification__message">Lisa sent you a mail</p>
-                  <p class="app-notification__meta">2 min ago</p>
+                  <p class="app-notification__message">Todas as notificações foram lidas</p>
+                  <p class="app-notification__meta">Hoje</p>
                 </div>
-              </a></li>
-            <li>
-              <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
-                <div>
-                  <p class="app-notification__message">Mail server not working</p>
-                  <p class="app-notification__meta">5 min ago</p>
-                </div>
-              </a></li>
-            <li>
-              <a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
-                <div>
-                  <p class="app-notification__message">Transaction complete</p>
-                  <p class="app-notification__meta">2 days ago</p>
-                </div>
-              </a></li>
+              </a>
+            </li>
           </div>
-        </div>
-        <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
+        <% else %>
+          <li class="app-notification__title">Você tem <%= @notifications.length %> novas notificações.</li>
+          <% @notifications.each do |notification| %>
+            <div class="app-notification__content">
+
+              <% if notification.type_message == "warning" %>
+                <li>
+                  <a class="app-notification__item" onclick="changeViewNotification(<%= notification.id %>)" href=<%= edit_tank_path(notification.tank_id) %>>
+                    <span class="app-notification__icon">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x text-warning"></i>
+                        <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </span>
+                    <div>
+                      <p class="app-notification__message"><%= notification.message %><%= notification.tank_id %></p>
+                      <% if Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i == 0 %>
+                        <p class="app-notification__meta">Hoje</p>
+                      <% else %>
+                        <p class="app-notification__meta">A <%= (Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i) / 1000 %> </p>
+                      <% end %>
+                    </div>
+                  </a>
+                </li>
+              <% end %>
+
+              <% if notification.type_message == "danger" %>
+                <li>
+                  <a class="app-notification__item" href=<%= edit_tank_path(notification.tank_id) %>>
+                    <span class="app-notification__icon">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                        <i class="fa fa-times fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </span>
+                    <div>
+                      <p class="app-notification__message"><%= notification.message %><%= notification.tank_id %></p>
+                      <% if Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i == 0 %>
+                        <p class="app-notification__meta">Hoje</p>
+                      <% else %>
+                        <p class="app-notification__meta">A <%= (Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i) / 1000 %> </p>
+                      <% end %>
+                    </div>
+                  </a>
+                </li>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
       </ul>
     </li>
 
@@ -65,10 +83,10 @@
       <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
       <ul class="dropdown-menu settings-menu dropdown-menu-right">
         <li>
-        <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item a_black" do %>
-          <i class="fa fa-sign-out fa-lg"></i>
-          <span>Sair</span>
-        <% end %>
+          <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item a_black" do %>
+            <i class="fa fa-sign-out fa-lg"></i>
+            <span>Sair</span>
+          <% end %>
         </li>
       </ul>
     </li>

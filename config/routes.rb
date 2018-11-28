@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   delete "/species.:id", to: "species#destroy"
   post "/tanks/find_date", to: "tanks#find_date"
   post "/ambiental_conditions/calc", to: "ambiental_conditions#calculate"
+  post "/notifications/update_view/:id", to: "notifications#update_view"
   redirect("/users/sign_in")
 
   authenticate :user do

@@ -64,5 +64,17 @@ function notificationDismiss(){
 }
 
 function checkValues(){
-    $.ajax
+    console.log("5 segundos");
+}
+
+function changeViewNotification(id){
+    $.ajax({
+        url: '/notifications/update_view/'+id,
+        type: 'POST',
+        dataType: 'json',
+        beforeSend: function(xhr){
+            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        },
+    });
+
 }

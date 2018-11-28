@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+.app-notification__item:visited {
+  color: #0d1214;
+}
+
 // configuring the outiline a tag
 .btn-outline-primary {
   i {
@@ -72,16 +76,29 @@ body {
   bottom: 30px;
   font-size: 17px;
 }
-.notification:hover{
+
+.notification:hover {
   cursor: pointer;
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
