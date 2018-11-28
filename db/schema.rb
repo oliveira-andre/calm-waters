@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2018_11_26_025642) do
 
-  create_table "ambiental_conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "ambiental_conditions", force: :cascade do |t|
     t.integer "ideal_temperature"
     t.integer "ideal_oxigen"
     t.integer "ideal_ph"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "food_species", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "food_species", force: :cascade do |t|
     t.bigint "food_id"
     t.integer "food_quantity"
     t.datetime "created_at", null: false
@@ -30,14 +33,14 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["food_id"], name: "index_food_species_on_food_id"
   end
 
-  create_table "food_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "food_types", force: :cascade do |t|
     t.string "description"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "foods", force: :cascade do |t|
     t.bigint "food_type_id"
     t.string "name"
     t.string "composition"
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["food_type_id"], name: "index_foods_on_food_type_id"
   end
 
-  create_table "monitoring_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "monitoring_histories", force: :cascade do |t|
     t.bigint "tank_id"
     t.integer "monitoring_date"
     t.string "ph"
@@ -63,7 +66,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["tank_id"], name: "index_monitoring_histories_on_tank_id"
   end
 
-  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "notifications", force: :cascade do |t|
     t.string "message"
     t.string "type_message"
     t.bigint "tank_id"
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["tank_id"], name: "index_notifications_on_tank_id"
   end
 
-  create_table "solo_sensors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "solo_sensors", force: :cascade do |t|
     t.bigint "tank_id"
     t.string "calcium"
     t.string "ph"
@@ -84,9 +87,9 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["tank_id"], name: "index_solo_sensors_on_tank_id"
   end
 
-  create_table "species", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "species", force: :cascade do |t|
     t.string "price"
-    t.decimal "weight", precision: 10
+    t.decimal "weight"
     t.bigint "food_specie_id"
     t.bigint "ambiental_condition_id"
     t.string "specie_name"
@@ -97,7 +100,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["food_specie_id"], name: "index_species_on_food_specie_id"
   end
 
-  create_table "tanks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tanks", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "specie_id"
     t.integer "population_date"
@@ -116,7 +119,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["user_id"], name: "index_tanks_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "example@example.com"
     t.string "name", default: "", null: false
     t.string "cpf", default: "", null: false
@@ -130,7 +133,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "water_sensors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "water_sensors", force: :cascade do |t|
     t.bigint "tank_id"
     t.string "calcium"
     t.string "ph"
