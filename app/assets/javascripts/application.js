@@ -64,7 +64,23 @@ function notificationDismiss(){
 }
 
 function checkValues(){
-    console.log("5 segundos");
+    $.ajax({
+        url: "/tanks/find_date",
+        type: 'POST',
+        dataType: 'json',
+        beforeSend: function(xhr){
+            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        },
+    });
+
+    $.ajax({
+        url: "/ambiental_conditions/calc",
+        type: 'POST',
+        dataType: 'json',
+        beforeSend: function(xhr){
+            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        },
+    });
 }
 
 function changeViewNotification(id){
