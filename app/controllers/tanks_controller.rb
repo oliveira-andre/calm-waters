@@ -9,6 +9,7 @@ class TanksController < ApplicationController
 
   def new
     @tank = Tank.new
+    @temperature = AutocompleteInputs.new.temperature
   end
 
   def edit; end
