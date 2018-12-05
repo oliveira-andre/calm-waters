@@ -19,7 +19,5 @@ test:
 
 production:
   <<: *default
-  database: dd2h5qm01k3dmf
-  username: bzjmeishczdcaf
-  password: f8ca14cc8a408810ecfb7f992944f55d4dea2d27ead1cc76429911b7a306b589
-  host: ec2-23-21-201-12.compute-1.amazonaws.com
+  username: 
+  password:
