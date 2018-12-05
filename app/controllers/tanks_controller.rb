@@ -22,6 +22,7 @@ class TanksController < ApplicationController
         flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to tanks_path}
         format.json {render :show, status: :created, location: @tank}
+        MonitoringHistory.create(tank_id: @tank.id, monitoring_date: Time.now, ph: @tank.ph, oxigen: @tank.oxigen)
       else
         flash[:error] = "Verifique os campos"
         format.html {render :new}
@@ -36,6 +37,7 @@ class TanksController < ApplicationController
         flash[:success] = "Editado com sucesso"
         format.html {redirect_to tanks_path}
         format.json {render :show, status: :ok, location: @tank}
+        MonitoringHistory.create(tank_id: @tank.id, monitoring_date: Time.now, ph: @tank.ph, oxigen: @tank.oxigen)
       else
         flash[:error] = "Verifique os campos"
         format.html {render :edit}
