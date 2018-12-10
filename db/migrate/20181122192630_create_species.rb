@@ -4,7 +4,6 @@ class CreateSpecies < ActiveRecord::Migration[5.2]
       t.string :price
       t.decimal :weight
       t.references :food_specie, foreign_key: true
-      t.references :ambiental_condition, foreign_key: true
       t.string :specie_name
       t.string :observation
 

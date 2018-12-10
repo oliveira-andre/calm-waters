@@ -46,22 +46,24 @@
         </div>
       </div>
 
-      <% @tanks.each do |tank| %>
-        <div class="col-md-4">
-          <div class="tile" style="background-color: #B4CDCD;">
-            <h3 class="tile-title">Aquário <%= tank.id %></h3>
-            <p><strong>Espécies:</strong> <%= tank.specie.specie_name %></p>
-            <p><strong>Dia da População:</strong> <span class="date_mask"><%= tank.population_date %></span></p>
-            <p><strong>População Inicial: </strong> <%= tank.initial_quantity %></p>
-            <% if tank.depopulation_date %>
-              <p><strong>Dia da Despopulação: </strong> <%= tank.depopulation_date %></p>
-            <% end %>
-            <% if tank.final_quantity %>
-              <p><strong>Quantidade Final: </strong> <%= tank.final_quantity %></p>
-            <% end %>
+      <div class="row">
+        <% @tanks.each do |tank| %>
+          <div class="col-md-4">
+            <div class="tile" style="background-color: #B4CDCD;">
+              <h3 class="tile-title">Aquário <%= tank.id %></h3>
+              <p><strong>Espécies:</strong> <%= tank.specie.specie_name %></p>
+              <p><strong>Dia da População:</strong> <span class="date_mask"><%= tank.population_date %></span></p>
+              <p><strong>População Inicial: </strong> <%= tank.initial_quantity %></p>
+              <% if tank.depopulation_date %>
+                <p><strong>Dia da Despopulação: </strong> <%= tank.depopulation_date %></p>
+              <% end %>
+              <% if tank.final_quantity %>
+                <p><strong>Quantidade Final: </strong> <%= tank.final_quantity %></p>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
 
       <div class="row">
         <div class="col-md-6">

@@ -1,6 +1,6 @@
 class Specie < ApplicationRecord
   belongs_to :food_specie
-  belongs_to :ambiental_condition
+  has_one :ambiental_condition
 
   include RemoveSpecialCharacters
 

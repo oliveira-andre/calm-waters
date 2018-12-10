@@ -18,6 +18,7 @@
         <table class="table table-striped">
           <thead>
           <tr>
+            <th>Descrição</th>
             <th>Usuário</th>
             <th>Espécie</th>
             <th>Data de População</th>
@@ -31,6 +32,7 @@
           <tbody>
           <% @tanks.each do |tank| %>
             <tr>
+              <td><%= tank.tank_type %></td>
               <td class="cpf"><%= tank.user %></td>
               <td><%= tank.specie %></td>
               <td class="date_mask"><%= tank.population_date %></td>

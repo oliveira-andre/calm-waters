@@ -113,6 +113,6 @@ class AmbientalConditionsController < ApplicationController
   end
 
   def ambiental_condition_params
-    params.require(:ambiental_condition).permit(:ideal_temperature, :ideal_oxigen, :ideal_ph, :ideal_ammonia, :ideal_acidity)
+    params.require(:ambiental_condition).permit(:ideal_temperature, :ideal_oxigen, :ideal_ph, :ideal_ammonia, :ideal_acidity, :specie)
   end
 end

@@ -12,6 +12,7 @@ $(document).on("turbolinks:load", function () {
     });
 
     $('.money').maskMoney({prefix: 'R$', thousands: '.', decimal: ','}).trigger("mask.maskMoney");
+    $(".td_money").mask("R$###.###.###,##");
 
     $(".date_mask").mask("00/00/0000");
     $(".cpf").mask("000.000.000-00", {reverse: true});

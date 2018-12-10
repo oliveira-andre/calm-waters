@@ -18,7 +18,7 @@ class SpeciesController < ApplicationController
 
     respond_to do |format|
       if @specie.save
-        #TODO MESSAGE
+        flash[:success] = "Cadastrado com sucesso"
         format.html {redirect_to species_path}
         format.json {render :show, status: :created, location: @species}
       else
@@ -31,6 +31,7 @@ class SpeciesController < ApplicationController
   def update
     respond_to do |format|
       if @specie.update(species_params)
+        flash[:success] = "Atualizado com sucesso"
         format.html {redirect_to species_path}
         format.json {render :show, status: :ok, location: @species}
       else

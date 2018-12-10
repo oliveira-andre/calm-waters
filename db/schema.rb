@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.integer "ideal_ph"
     t.integer "ideal_ammonia"
     t.integer "ideal_acidity"
+    t.bigint "specie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["specie_id"], name: "index_ambiental_conditions_on_specie_id"
   end
 
   create_table "food_species", force: :cascade do |t|
@@ -91,12 +93,10 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.string "price"
     t.decimal "weight"
     t.bigint "food_specie_id"
-    t.bigint "ambiental_condition_id"
     t.string "specie_name"
     t.string "observation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ambiental_condition_id"], name: "index_species_on_ambiental_condition_id"
     t.index ["food_specie_id"], name: "index_species_on_food_specie_id"
   end
 
@@ -146,12 +146,12 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["tank_id"], name: "index_water_sensors_on_tank_id"
   end
 
+  add_foreign_key "ambiental_conditions", "species", column: "specie_id"
   add_foreign_key "food_species", "foods"
   add_foreign_key "foods", "food_types"
   add_foreign_key "monitoring_histories", "tanks"
   add_foreign_key "notifications", "tanks"
   add_foreign_key "solo_sensors", "tanks"
-  add_foreign_key "species", "ambiental_conditions"
   add_foreign_key "species", "food_species", column: "food_specie_id"
   add_foreign_key "tanks", "species", column: "specie_id"
   add_foreign_key "tanks", "users"

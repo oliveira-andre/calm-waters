@@ -53,9 +53,8 @@ class TanksController < ApplicationController
         format.html {redirect_to tanks_path}
         format.json {head :no_content}
       else
-        flash[:error] = "Está relacionado em outra tabela"
+        flash[:error] = "Pois está populado"
         format.html {redirect_to tanks_path}
-        format.json {head :no_content}
       end
     end
   end
@@ -63,7 +62,7 @@ class TanksController < ApplicationController
   def find_date
     tanks = Tank.all
     tanks.each do |tank|
-      date = Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - tank.updated_at.strftime('%d%m%Y').to_i
+      date = Time.now.getlocal("+00:00").strftime("%d%m%Y").to_i - tank.updated_at.strftime("%d%m%Y").to_i
       if date != 0
         Notification.create(message: "Você está a um dia ou mais sem editar o tanque", type_message: "warning", tank_id: tank.id)  
       end
