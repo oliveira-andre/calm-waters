@@ -56,7 +56,7 @@
           <entry key="erb" value="472" />
           <entry key="js" value="1562" />
           <entry key="md" value="417" />
-          <entry key="rb" value="1912" />
+          <entry key="rb" value="1977" />
           <entry key="yml" value="47" />
         </counts>
       </usages-collector>
@@ -66,7 +66,7 @@
           <entry key="Markdown" value="417" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="RHTML" value="472" />
-          <entry key="Ruby" value="1938" />
+          <entry key="Ruby" value="2003" />
           <entry key="YAML" value="47" />
         </counts>
       </usages-collector>
@@ -128,16 +128,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="687">
-              <caret line="145" column="77" selection-start-line="145" selection-start-column="77" selection-end-line="145" selection-end-column="77" />
-              <caret line="149" column="77" selection-start-line="149" selection-start-column="77" selection-end-line="149" selection-end-column="77" />
-              <caret line="153" column="82" selection-start-line="153" selection-start-column="82" selection-end-line="153" selection-end-column="82" />
-              <caret line="156" column="82" selection-start-line="156" selection-start-column="82" selection-end-line="156" selection-end-column="82" />
-              <caret line="160" column="79" selection-start-line="160" selection-start-column="79" selection-end-line="160" selection-end-column="79" />
-              <caret line="163" column="79" selection-start-line="163" selection-start-column="79" selection-end-line="163" selection-end-column="79" />
-              <caret line="167" column="73" selection-start-line="167" selection-start-column="73" selection-end-line="167" selection-end-column="73" />
-              <caret line="170" column="73" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
-              <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
-              <caret line="177" column="77" selection-start-line="177" selection-start-column="77" selection-end-line="177" selection-end-column="77" />
+              <caret line="177" column="235" selection-start-line="177" selection-start-column="235" selection-end-line="177" selection-end-column="235" />
             </state>
           </provider>
         </entry>
@@ -489,12 +480,12 @@
       <workItem from="1543432787358" duration="154000" />
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
-      <workItem from="1544467895501" duration="10567000" />
+      <workItem from="1544467895501" duration="11200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68740000" />
+    <option name="totallyTimeSpent" value="69373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -873,16 +864,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
-          <caret line="145" column="77" selection-start-line="145" selection-start-column="77" selection-end-line="145" selection-end-column="77" />
-          <caret line="149" column="77" selection-start-line="149" selection-start-column="77" selection-end-line="149" selection-end-column="77" />
-          <caret line="153" column="82" selection-start-line="153" selection-start-column="82" selection-end-line="153" selection-end-column="82" />
-          <caret line="156" column="82" selection-start-line="156" selection-start-column="82" selection-end-line="156" selection-end-column="82" />
-          <caret line="160" column="79" selection-start-line="160" selection-start-column="79" selection-end-line="160" selection-end-column="79" />
-          <caret line="163" column="79" selection-start-line="163" selection-start-column="79" selection-end-line="163" selection-end-column="79" />
-          <caret line="167" column="73" selection-start-line="167" selection-start-column="73" selection-end-line="167" selection-end-column="73" />
-          <caret line="170" column="73" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
-          <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
-          <caret line="177" column="77" selection-start-line="177" selection-start-column="77" selection-end-line="177" selection-end-column="77" />
+          <caret line="177" column="235" selection-start-line="177" selection-start-column="235" selection-end-line="177" selection-end-column="235" />
         </state>
       </provider>
     </entry>
