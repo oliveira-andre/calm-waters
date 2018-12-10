@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/calm_waters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/calm_waters.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/species_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/species_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/ambiental_condition.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ambiental_condition.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/specie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/specie.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboards/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboards/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/species/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/species/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/species/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tanks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tanks/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181122190919_create_ambiental_conditions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181122192631_create_ambiental_conditions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181122192630_create_species.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181122192630_create_species.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -68,7 +52,7 @@
           <entry key="Gemfile" value="23" />
           <entry key="erb" value="337" />
           <entry key="js" value="1562" />
-          <entry key="rb" value="938" />
+          <entry key="rb" value="1000" />
           <entry key="yml" value="47" />
         </counts>
       </usages-collector>
@@ -76,7 +60,7 @@
         <counts>
           <entry key="JavaScript" value="1562" />
           <entry key="RHTML" value="337" />
-          <entry key="Ruby" value="961" />
+          <entry key="Ruby" value="1023" />
           <entry key="YAML" value="47" />
         </counts>
       </usages-collector>
@@ -138,7 +122,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/species/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
@@ -151,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="143">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="16" />
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -165,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="115" column="133" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
+            <state relative-caret-position="121">
+              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -240,7 +224,6 @@
         <option value="$PROJECT_DIR$/app/views/dashboards/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tanks/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tanks/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/ambiental_condition.rb" />
         <option value="$PROJECT_DIR$/app/models/specie.rb" />
         <option value="$PROJECT_DIR$/app/views/ambiental_conditions/_form.html.erb" />
@@ -249,6 +232,7 @@
         <option value="$PROJECT_DIR$/app/controllers/species_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/species/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" />
       </list>
     </option>
   </component>
@@ -293,13 +277,6 @@
               <item name="calm-waters" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calm-waters" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calm-waters" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="calm-waters" type="b2602c69:ProjectViewProjectNode" />
@@ -490,12 +467,12 @@
       <workItem from="1543432787358" duration="154000" />
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
-      <workItem from="1544467895501" duration="1603000" />
+      <workItem from="1544467895501" duration="2204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59776000" />
+    <option name="totallyTimeSpent" value="60377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -835,13 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="115" column="133" selection-start-line="115" selection-start-column="133" selection-end-line="115" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/species/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -877,20 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181122192631_create_ambiental_conditions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/specie.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -909,6 +865,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
           <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181122192631_create_ambiental_conditions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
         </state>
       </provider>
     </entry>

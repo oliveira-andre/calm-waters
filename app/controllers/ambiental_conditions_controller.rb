@@ -63,7 +63,7 @@ class AmbientalConditionsController < ApplicationController
   def calculate
     tanks = Tank.all
     tanks.each do |tank|
-      ambiental_condition = AmbientalCondition.find(Specie.find(tank.specie_id).ambiental_condition_id)
+      ambiental_condition = AmbientalCondition.find_by(specie_id: Specie.find(tank.specie_id).id)
       ammonia = tank.ammonia - ambiental_condition.ideal_ammonia
       temperature = tank.temperature - ambiental_condition.ideal_temperature
       oxigen = tank.oxigen - ambiental_condition.ideal_oxigen
