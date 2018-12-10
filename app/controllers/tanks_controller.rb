@@ -60,7 +60,7 @@ class TanksController < ApplicationController
   end
 
   def insert_diary_data
-    tank = ActiveModelSerializers::TankSerializer.new(id: params[:id], acidity: params[:acidity], temperature: params[:temperature], oxigen: params[:oxigen], ammonia: params[:ammonia], ph: params[:ph], depopulation_date: params[:depopulation_date], final_quantity: [:final_quantity]).diary_data
+    tank = TankSerializer.new(id: params[:id], acidity: params[:acidity], temperature: params[:temperature], oxigen: params[:oxigen], ammonia: params[:ammonia], ph: params[:ph], depopulation_date: params[:depopulation_date], final_quantity: [:final_quantity]).diary_data
     render 200, json: {cod: 200, status: "Created", tanque: tank} unless params[:id].nil? || params[:acidity].nil? || params[:temperature].nil? || params[:oxigen].nil? || params[:ammonia].nil? || params[:ph].nil?
     render 404, json: {cod: 404, status: "not found", mensagem: "Faltando parametros"} if params[:id].nil? || params[:acidity].nil? || params[:temperature].nil? || params[:oxigen].nil? || params[:ammonia].nil? || params[:ph].nil?
   end
