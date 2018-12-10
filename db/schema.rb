@@ -28,21 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
   end
 
   create_table "food_species", force: :cascade do |t|
-    t.bigint "food_id"
     t.integer "food_quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_food_species_on_food_id"
-  end
-
-  create_table "food_types", force: :cascade do |t|
-    t.string "description"
-    t.boolean "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "foods", force: :cascade do |t|
     t.bigint "food_type_id"
     t.string "name"
     t.string "composition"
@@ -50,7 +36,14 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["food_type_id"], name: "index_foods_on_food_type_id"
+    t.index ["food_type_id"], name: "index_food_species_on_food_type_id"
+  end
+
+  create_table "food_types", force: :cascade do |t|
+    t.string "description"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "monitoring_histories", force: :cascade do |t|
@@ -147,8 +140,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
   end
 
   add_foreign_key "ambiental_conditions", "species", column: "specie_id"
-  add_foreign_key "food_species", "foods"
-  add_foreign_key "foods", "food_types"
+  add_foreign_key "food_species", "food_types"
   add_foreign_key "monitoring_histories", "tanks"
   add_foreign_key "notifications", "tanks"
   add_foreign_key "solo_sensors", "tanks"
