@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/tank_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/tank_serializer.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,7 +57,7 @@
           <entry key="erb" value="452" />
           <entry key="js" value="1562" />
           <entry key="md" value="417" />
-          <entry key="rb" value="1718" />
+          <entry key="rb" value="1780" />
           <entry key="yml" value="47" />
         </counts>
       </usages-collector>
@@ -66,7 +67,7 @@
           <entry key="Markdown" value="417" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="RHTML" value="452" />
-          <entry key="Ruby" value="1744" />
+          <entry key="Ruby" value="1806" />
           <entry key="YAML" value="47" />
         </counts>
       </usages-collector>
@@ -83,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -98,17 +99,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/serializers/tank_serializer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="5" column="145" selection-start-line="5" selection-start-column="145" selection-end-line="5" selection-end-column="145" />
+            <state relative-caret-position="13">
+              <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/tanks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+            <state relative-caret-position="545">
+              <caret line="64" column="229" lean-forward="true" selection-start-line="64" selection-start-column="229" selection-end-line="64" selection-end-column="229" />
             </state>
           </provider>
         </entry>
@@ -145,24 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="602">
               <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="117" column="19" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/tank.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -239,12 +222,12 @@
         <option value="$PROJECT_DIR$/app/services/autocomplete_inputs.rb" />
         <option value="$PROJECT_DIR$/app/serializers/diary_data_serializer.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/serializers/tank_serializer.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/food_specie.rb" />
         <option value="$PROJECT_DIR$/app/models/tank.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/tanks_controller.rb" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/serializers/tank_serializer.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/tanks_controller.rb" />
       </list>
     </option>
   </component>
@@ -460,12 +443,12 @@
       <workItem from="1543432787358" duration="154000" />
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
-      <workItem from="1544467895501" duration="7619000" />
+      <workItem from="1544467895501" duration="7992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65792000" />
+    <option name="totallyTimeSpent" value="66165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -814,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/serializers/tank_serializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="5" column="145" selection-start-line="5" selection-start-column="145" selection-end-line="5" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13">
@@ -835,13 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tanks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -849,6 +818,20 @@
             <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/serializers/tank_serializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tanks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="64" column="229" lean-forward="true" selection-start-line="64" selection-start-column="229" selection-end-line="64" selection-end-column="229" />
         </state>
       </provider>
     </entry>
