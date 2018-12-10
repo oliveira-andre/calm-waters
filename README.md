@@ -42,3 +42,35 @@ example
 | /monitoring_histories           | you can see all anotations registered                |
 | /ambiental_conditions/new       | you can add a new ambiental conditions               |
 | /ambiental_conditions           | you can see all ambiental conditions registered      |
+| /dados_diarios                  | you can insert diary data by a api params            |
+
+### how to use API
+
+Sending
+
+```
+    POST https://aguas-tranquilas.herokuapp.com/dados_diarios
+```
+
+Params
+
+|       params                     |              Details                                 |
+|:--------------------------------:|:----------------------------------------------------:|
+| id                               | ID of tank that you will update                      |
+| acidity                          | current acidity of the day in the tank               |
+| temperature                      | current temperature of the day in the tank           |
+| oxigen                           | current oxigen of the day in the tank                |
+| ammonia                          | current ammonia of the day in the tank               |
+| ph                               | current ph of the day in the tank                    |
+
+
+Example
+
+|       params                     |   Details      |
+|:--------------------------------:|:--------------:|
+| id                               | 1   |
+| acidity                          | 11  |
+| temperature                      | 25  |
+| oxigen                           | 12  |
+| ammonia                          | 50  |
+| ph                               | 110 |

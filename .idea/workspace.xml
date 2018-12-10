@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tanks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/food_specie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/food_specie.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tank.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/tank.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/diary_data_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/tank_serializer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -61,6 +55,7 @@
           <entry key="dummy" value="22" />
           <entry key="erb" value="452" />
           <entry key="js" value="1562" />
+          <entry key="md" value="417" />
           <entry key="rb" value="1718" />
           <entry key="yml" value="47" />
         </counts>
@@ -68,6 +63,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="1562" />
+          <entry key="Markdown" value="417" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="RHTML" value="452" />
           <entry key="Ruby" value="1744" />
@@ -87,12 +83,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="104">
-                <caret line="8" column="41" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="41" />
+              <first_editor relative-caret-position="767">
+                <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
               </first_editor>
               <second_editor />
             </state>
@@ -108,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tanks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="39">
@@ -198,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/solo_sensors/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/water_sensors/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitoring_histories_controller.rb" />
@@ -249,6 +244,7 @@
         <option value="$PROJECT_DIR$/app/models/food_specie.rb" />
         <option value="$PROJECT_DIR$/app/models/tank.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tanks_controller.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -464,12 +460,12 @@
       <workItem from="1543432787358" duration="154000" />
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
-      <workItem from="1544467895501" duration="7208000" />
+      <workItem from="1544467895501" duration="7619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65381000" />
+    <option name="totallyTimeSpent" value="65792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -811,16 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="104">
-            <caret line="8" column="41" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="41" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/tank.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -853,6 +839,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="767">
+            <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
