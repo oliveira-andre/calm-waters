@@ -61,47 +61,49 @@ class AmbientalConditionsController < ApplicationController
   end
 
   def calculate
-    tanks = Tank.all
-    tanks.each do |tank|
-      ambiental_condition = AmbientalCondition.find_by(specie_id: Specie.find(tank.specie_id).id)
-      ammonia = tank.ammonia - ambiental_condition.ideal_ammonia
-      temperature = tank.temperature - ambiental_condition.ideal_temperature
-      oxigen = tank.oxigen - ambiental_condition.ideal_oxigen
-      ph = tank.ph - ambiental_condition.ideal_ph
-      acidity = tank.acidity - ambiental_condition.ideal_acidity
-      if ammonia < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Amonia está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
-      if ammonia > 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Amonia está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
+    if AmbientalCondition.all.length != 0
+      tanks = Tank.all
+      tanks.each do |tank|
+        ambiental_condition = AmbientalCondition.find_by(specie_id: Specie.find(tank.specie_id).id)
+        ammonia = tank.ammonia - ambiental_condition.ideal_ammonia
+        temperature = tank.temperature - ambiental_condition.ideal_temperature
+        oxigen = tank.oxigen - ambiental_condition.ideal_oxigen
+        ph = tank.ph - ambiental_condition.ideal_ph
+        acidity = tank.acidity - ambiental_condition.ideal_acidity
+        if ammonia < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Amonia está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
+        if ammonia > 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Amonia está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
 
-      if temperature < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Temperatura está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
-      if temperature < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Temperatura está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
+        if temperature < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Temperatura está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
+        if temperature < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Temperatura está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
 
-      if oxigen < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Oxigenio está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
-      if oxigen < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Oxigenio está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
+        if oxigen < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Oxigenio está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
+        if oxigen < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Oxigenio está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
 
-      if ph < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "PH está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
-      if ph < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "PH está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
+        if ph < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "PH está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
+        if ph < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "PH está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
 
-      if acidity < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Acidez está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
-      end
-      if acidity < 0 && Notification.last.tank_id != tank.id
-        Notification.create(message: "Acidez está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        if acidity < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Acidez está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
+        if acidity < 0 && Notification.last.tank_id != tank.id
+          Notification.create(message: "Acidez está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
+        end
       end
     end
   end
