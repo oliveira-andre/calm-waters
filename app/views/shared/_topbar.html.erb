@@ -8,7 +8,7 @@
     </li>
 
     <li class="dropdown">
-      <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+      <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><span class="badge badge-light"><%= @notifications.length %></span><i class="fa fa-bell-o fa-lg"></i></a>
       <ul class="app-notification dropdown-menu dropdown-menu-right">
         <% if @notifications.nil? %>
           <div class="app-notification__content">
@@ -34,7 +34,7 @@
 
               <% if notification.type_message == "warning" %>
                 <li>
-                  <a class="app-notification__item" onclick="changeViewNotification(<%= notification.id %>)" href=<%= edit_tank_path(notification.tank_id) %>>
+                  <a class="app-notification__item" onclick="changeViewNotification(<%= notification.id %>)">
                     <span class="app-notification__icon">
                       <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x text-warning"></i>
@@ -42,7 +42,7 @@
                       </span>
                     </span>
                     <div>
-                      <p class="app-notification__message"><%= notification.message %><%= notification.tank_id %></p>
+                      <p class="app-notification__message"><%= notification.message %> <%= notification.tank.tank_type %></p>
                       <% if Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i == 0 %>
                         <p class="app-notification__meta">Hoje</p>
                       <% else %>
@@ -55,7 +55,7 @@
 
               <% if notification.type_message == "danger" %>
                 <li>
-                  <a class="app-notification__item" href=<%= edit_tank_path(notification.tank_id) %>>
+                  <a class="app-notification__item" onclick="changeViewNotification(<%= notification.id %>)">
                     <span class="app-notification__icon">
                       <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x text-danger"></i>
@@ -63,7 +63,7 @@
                       </span>
                     </span>
                     <div>
-                      <p class="app-notification__message"><%= notification.message %><%= notification.tank_id %></p>
+                      <p class="app-notification__message"><%= notification.message %> <%= notification.tank.tank_type%></p>
                       <% if Time.now.getlocal('+00:00').strftime('%d%m%Y').to_i - notification.created_at.strftime('%d%m%Y').to_i == 0 %>
                         <p class="app-notification__meta">Hoje</p>
                       <% else %>
