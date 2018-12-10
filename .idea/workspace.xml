@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/ambiental_conditions.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/ambiental_conditions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -57,7 +56,7 @@
           <entry key="erb" value="452" />
           <entry key="js" value="1562" />
           <entry key="md" value="417" />
-          <entry key="rb" value="1815" />
+          <entry key="rb" value="1840" />
           <entry key="yml" value="47" />
         </counts>
       </usages-collector>
@@ -67,7 +66,7 @@
           <entry key="Markdown" value="417" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="RHTML" value="452" />
-          <entry key="Ruby" value="1841" />
+          <entry key="Ruby" value="1866" />
           <entry key="YAML" value="47" />
         </counts>
       </usages-collector>
@@ -140,8 +139,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="147" column="10" selection-start-line="147" selection-start-column="10" selection-end-line="147" selection-end-column="10" />
+            <state relative-caret-position="164">
+              <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -483,12 +482,12 @@
       <workItem from="1543432787358" duration="154000" />
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
-      <workItem from="1544467895501" duration="9032000" />
+      <workItem from="1544467895501" duration="9167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67205000" />
+    <option name="totallyTimeSpent" value="67340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -866,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ambiental_conditions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="147" column="10" selection-start-line="147" selection-start-column="10" selection-end-line="147" selection-end-column="10" />
+        <state relative-caret-position="164">
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
         </state>
       </provider>
     </entry>

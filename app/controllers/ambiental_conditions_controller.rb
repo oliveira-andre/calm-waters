@@ -61,7 +61,7 @@ class AmbientalConditionsController < ApplicationController
   end
 
   def calculate
-    if AmbientalCondition.all.length != 0
+    if Notification.where(viewed: false).length != 0
       tanks = Tank.all
       tanks.each do |tank|
         ambiental_condition = AmbientalCondition.find_by(specie_id: Specie.find(tank.specie_id).id)
@@ -70,7 +70,7 @@ class AmbientalConditionsController < ApplicationController
         oxigen = tank.oxigen - ambiental_condition.ideal_oxigen
         ph = tank.ph - ambiental_condition.ideal_ph
         acidity = tank.acidity - ambiental_condition.ideal_acidity
-        if Notification.length == 0
+        if Notification.where(viewd: fa).length == 0
           if ammonia < 0
             Notification.create(message: "Amonia está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
           end
@@ -145,7 +145,7 @@ class AmbientalConditionsController < ApplicationController
           if ammonia < 0 && Notification.last.tank_id != tank.id
             Notification.create(message: "Amonia está menor do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
           end
-          
+
           if ammonia > 0 && Notification.last.tank_id != tank.id
             Notification.create(message: "Amonia está maior do que o ideal no tanque", type_message: "danger", tank_id: tank.id)
           end
