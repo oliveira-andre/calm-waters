@@ -9,14 +9,12 @@ class TanksController < ApplicationController
 
   def new
     @tank = Tank.new
-    @temperature = AutocompleteInputs.new.temperature
   end
 
   def edit; end
 
   def create
-    @tank = Tank.new(tank_params.merge(temperature: AutocompleteInputs.new.temperature))
-
+    @tank = Tank.new(tank_params)
     respond_to do |format|
       if @tank.save
         flash[:success] = "Cadastrado com sucesso"
@@ -33,7 +31,7 @@ class TanksController < ApplicationController
 
   def update
     respond_to do |format|
-      if @tank.update(tank_params.merge(temperature: AutocompleteInputs.new.temperature))
+      if @tank.update(tank_params)
         flash[:success] = "Editado com sucesso"
         format.html {redirect_to tanks_path}
         format.json {render :show, status: :ok, location: @tank}
