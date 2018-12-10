@@ -1,5 +1,7 @@
 class TanksController < ApplicationController
   before_action :set_tank, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:insert_diary_data]
+  skip_before_action :verify_authenticity_token, only: [:insert_diary_data]
 
   def index
     @tanks = Tank.all
@@ -57,6 +59,12 @@ class TanksController < ApplicationController
     end
   end
 
+  def insert_diary_data
+    tank = ActiveModelSerializers::TankSerializer.new(id: params[:id], acidity: params[:acidity], temperature: params[:temperature], oxigen: params[:oxigen], ammonia: params[:ammonia], ph: params[:ph]).diary_data
+    render 200, json: {cod: 200, status: "Created", tanque: tank} unless params[:id].nil? || params[:acidity].nil? || params[:temperature].nil? || params[:oxigen].nil? || params[:ammonia].nil? || params[:ph].nil?
+    render 404, json: {cod: 404, status: "not found", mensagem: "Faltando parametros"} if params[:id].nil? || params[:acidity].nil? || params[:temperature].nil? || params[:oxigen].nil? || params[:ammonia].nil? || params[:ph].nil?
+  end
+
   def find_date
     tanks = Tank.all
     tanks.each do |tank|
@@ -74,6 +82,6 @@ class TanksController < ApplicationController
   end
 
   def tank_params
-    params.require(:tank).permit(:user_id, :specie_id, :population_date, :initial_quantity, :depopulation_date, :final_quantity, :tank_type, :temperature, :oxigen, :ph, :ammonia, :acidity)
+    params.require(:tank).permit(:id, :user_id, :specie_id, :population_date, :initial_quantity, :depopulation_date, :final_quantity, :tank_type, :temperature, :oxigen, :ph, :ammonia, :acidity)
   end
 end

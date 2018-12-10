@@ -6,6 +6,6 @@ class FoodSpecie < ApplicationRecord
   validates :food_quantity, presence: true
 
   def to_s
-    food.name
+    name
   end
 end
