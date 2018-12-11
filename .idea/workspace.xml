@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b27a1da-94ec-4c80-ad4f-c1031a1c73f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/admin/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -57,7 +56,7 @@
         <counts>
           <entry key="Gemfile" value="26" />
           <entry key="dummy" value="22" />
-          <entry key="erb" value="1417" />
+          <entry key="erb" value="1418" />
           <entry key="js" value="1745" />
           <entry key="md" value="417" />
           <entry key="rb" value="3223" />
@@ -69,7 +68,7 @@
           <entry key="JavaScript" value="1745" />
           <entry key="Markdown" value="417" />
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="RHTML" value="1417" />
+          <entry key="RHTML" value="1418" />
           <entry key="Ruby" value="3249" />
           <entry key="YAML" value="47" />
         </counts>
@@ -91,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -507,12 +506,12 @@
       <workItem from="1543433094940" duration="9328000" />
       <workItem from="1544034597330" duration="3947000" />
       <workItem from="1544467895501" duration="17569000" />
-      <workItem from="1544555545399" duration="1201000" />
+      <workItem from="1544555545399" duration="1487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76943000" />
+    <option name="totallyTimeSpent" value="77229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -901,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
