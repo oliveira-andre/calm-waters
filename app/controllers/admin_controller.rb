@@ -25,6 +25,12 @@ class AdminController < ApplicationController
     @alarm = Alarm.find(params[:id])
   end
 
+  def catch_alarm
+    alarm = Alarm.where(active: true)
+    render json: {alarm: alarm.last, alarm_type: alarm.last.alarm_type.description} unless alarm.blank?
+    render json: {alarm: 0} if alarm.blank?
+  end
+
   private
 
   def alarm_params

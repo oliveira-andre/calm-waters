@@ -1,4 +1,7 @@
 $(document).on("turbolinks:load", function () {
+    checkAlarms();
+
+
     var polar_area_chart = $("#polar_area_chart");
     var PolarAreaChart = new Chart(polar_area_chart, {
         type: 'polarArea',
@@ -213,7 +216,6 @@ function differenceTankAndAmbiental() {
             xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
         },
         success: function (json) {
-            console.log(json);
             acidity = json.tank.acidity - json.ambiental_condition.ideal_acidity;
             ammonia = json.tank.ammonia - json.ambiental_condition.ideal_ammonia;
             oxigen = json.tank.oxigen - json.ambiental_condition.ideal_oxigen;
@@ -223,3 +225,26 @@ function differenceTankAndAmbiental() {
     });
     return [ph, acidity, ammonia, oxigen, temperature];
 }
+
+function checkAlarms() {
+    $.ajax({
+        url: "/check_alarms",
+        type: 'POST',
+        async: false,
+        dataType: 'json',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+        },
+        success: function (json) {
+            if (json.alarm != 0){
+                swal({
+                    icon: 'warning',
+                    title: 'cheque a '+json.alarm_type,
+                    text: json.alarm.message,
+                });
+
+            }
+        }
+    });
+}
+

@@ -8,4 +8,5 @@ module ApplicationHelper
     end
     notification.html_safe
   end
+
 end
