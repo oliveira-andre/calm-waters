@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :foods
   resources :food_types
   resources :ambiental_conditions
-  resource :dashboards, only: :index
+  resources :dashboards, only: :index
+  resources :admin, only: [:index, :create, :new]
   get "/species", to: "species#index", as: "species"
   get "/species/new", to: "species#new", as: "new_specie"
   get "/species/edit/:id", to: "species#edit", as: "edit_species"
