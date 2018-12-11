@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   resources :food_types
   resources :ambiental_conditions
   resources :dashboards, only: :index
-  resources :admin, only: [:index, :create, :new]
+  scope :admin do
+    get "/", to: "admin#index", as: "alarms"
+    get "/new", to: "admin#new", as: "new_alarm"
+    get "/:id", to: "admin#edit", as: "edit_alarm"
+    post "/", to: "admin#create"
+    patch ".:id", to: "admin#update"
+  end
   get "/species", to: "species#index", as: "species"
   get "/species/new", to: "species#new", as: "new_specie"
   get "/species/edit/:id", to: "species#edit", as: "edit_species"

@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_025642) do
+ActiveRecord::Schema.define(version: 2018_11_26_025644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alarm_types", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "alarms", force: :cascade do |t|
+    t.bigint "alarm_type_id"
+    t.boolean "active", default: false
+    t.boolean "sound_effect", default: false
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alarm_type_id"], name: "index_alarms_on_alarm_type_id"
+  end
 
   create_table "ambiental_conditions", force: :cascade do |t|
     t.integer "ideal_temperature"
@@ -139,6 +155,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025642) do
     t.index ["tank_id"], name: "index_water_sensors_on_tank_id"
   end
 
+  add_foreign_key "alarms", "alarm_types"
   add_foreign_key "ambiental_conditions", "species", column: "specie_id"
   add_foreign_key "food_species", "food_types"
   add_foreign_key "monitoring_histories", "tanks"

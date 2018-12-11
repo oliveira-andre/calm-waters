@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12">
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Criar Alarme</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Alarme</li>
+          <li class="breadcrumb-item">
+            <a href="#" class="a_black">cadastrar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tile">
+        <%= simple_form_for(@alarm) do |f| %>
+          <div class="row">
+            <div class="col-md-4">
+              <%= f.input :message, label: "Menssagem", input_html: {class: "form-control"}, error: "Mensagem é obrigatório" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.association :alarm_type, label: "Tipo do alarme", input_html: {class: "form-control"}, include_blank: "Selecione", error: "Tipo do alarme não pode ficar em branco" %>
+            </div>
+            <div class="col-md-2">
+              <b>Ativo?</b>
+              <div class="toggle-flip">
+                <label>
+                  <input type="checkbox" name="alarm[active]" id="food_type_active"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <b>Effeito de som?</b>
+              <div class="toggle-flip">
+                <label>
+                  <input type="checkbox" name="alarm[sound_effect]" id="food_type_active"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= button_tag(type: "submit", class: "btn btn-primary pull-right") do %>
+                <i class="fa fa-save"></i>
+                <span>Salvar</span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </main>
+  </div>
+</div>
