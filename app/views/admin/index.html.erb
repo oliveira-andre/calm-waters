@@ -20,15 +20,27 @@
           <tr>
             <th>Tipo do Alarme</th>
             <th>Ativo?</th>
-            <th>Effeito de som?</th>
+            <th>Efeito de som?</th>
             <th colspan="3"></th>
           </tr>
           </thead>
           <% @alarms.each do |alarm| %>
             <tr>
               <td><%= alarm.alarm_type %></td>
-              <td><%= alarm.active %></td>
-              <td><%= alarm.sound_effect %></td>
+              <td>
+                <% if alarm.active? %>
+                  Sim
+                <% else %>
+                  Não
+                <% end %>
+              </td>
+              <td>
+                <% if alarm.sound_effect? %>
+                  Sim
+                <% else %>
+                  Não
+                <% end %>
+              </td>
               <td>
                 <%= link_to "<i class='fa fa-edit'></i><span> Editar</span>".html_safe, edit_alarm_path(alarm), class: "btn btn-outline-primary" %>
               </td>
