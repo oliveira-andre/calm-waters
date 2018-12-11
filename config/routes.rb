@@ -28,8 +28,9 @@ Rails.application.routes.draw do
   post "/dashboards/ambiental_condition_values", to: "dashboards#get_ambiental_condition_values"
   post "/dashboards/tank_values", to: "dashboards#get_tank_values"
   post "/dashboards/ambiental_and_tank_values", to: "dashboards#get_difference_between_ambiental_condition_and_tank_values"
+  post "/feed/:id", to: "tanks#feed"
   post "/check_alarms", to: "admin#catch_alarm"
-  post "dados_diarios", to: "tanks#insert_diary_data"
+  post "/dados_diarios", to: "tanks#insert_diary_data"
   redirect("/users/sign_in")
 
   authenticate :user do

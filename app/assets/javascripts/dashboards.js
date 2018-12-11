@@ -1,8 +1,6 @@
 $(document).on("turbolinks:load", function () {
     checkAlarms();
-
-
-    var polar_area_chart = $("#polar_area_chart");
+    $("Knock-Knock").click();
     var PolarAreaChart = new Chart(polar_area_chart, {
         type: 'polarArea',
         data: {
@@ -242,7 +240,6 @@ function checkAlarms() {
                     title: 'cheque a '+json.alarm_type,
                     text: json.alarm.message,
                 });
-
             }
         }
     });

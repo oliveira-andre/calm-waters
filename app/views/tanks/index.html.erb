@@ -19,7 +19,6 @@
           <thead>
           <tr>
             <th>Descrição</th>
-            <th>Usuário</th>
             <th>Espécie</th>
             <th>Data de População</th>
             <th>Quantidade Inicial</th>
@@ -33,7 +32,6 @@
           <% @tanks.each do |tank| %>
             <tr>
               <td><%= tank.tank_type %></td>
-              <td class="cpf"><%= tank.user %></td>
               <td><%= tank.specie %></td>
               <td class="date_mask"><%= tank.population_date %></td>
               <td><%= tank.initial_quantity %></td>
@@ -50,6 +48,7 @@
               <td>
                 <%= link_to "<i class='fa fa-edit'></i><span> Editar</span>".html_safe, edit_tank_path(tank), class: "btn btn-outline-primary" %>
                 <%= link_to "<i class='fa fa-trash'></i><span> Excluir</span>".html_safe, tank, method: :delete, data: {confirm: "Você tem certeza?"}, class: "btn btn-outline-danger" %>
+                <button class="btn btn-outline-info" onclick="FeedFishes(<%= tank.id %>)"><i class="fa fa-apple" aria-hidden="true"></i> Alimentar</button> <span class="badge badge-light"><%= Tank.find(tank.id).feeded %></span>
               </td>
             </tr>
           <% end %>

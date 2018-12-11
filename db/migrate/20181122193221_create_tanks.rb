@@ -13,6 +13,7 @@ class CreateTanks < ActiveRecord::Migration[5.2]
       t.integer :oxigen
       t.integer :ammonia
       t.integer :ph
+      t.integer :feeded, default: 0
       
       t.timestamps
     end

@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025644) do
     t.integer "oxigen"
     t.integer "ammonia"
     t.integer "ph"
+    t.integer "feeded", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["specie_id"], name: "index_tanks_on_specie_id"

@@ -7,13 +7,15 @@ class TanksController < ApplicationController
     @tanks = Tank.all
   end
 
-  def show; end
+  def show;
+  end
 
   def new
     @tank = Tank.new
   end
 
-  def edit; end
+  def edit;
+  end
 
   def create
     @tank = Tank.new(tank_params)
@@ -70,10 +72,24 @@ class TanksController < ApplicationController
     tanks.each do |tank|
       date = Time.now.getlocal("+00:00").strftime("%d%m%Y").to_i - tank.updated_at.strftime("%d%m%Y").to_i
       if date != 0
-        Notification.create(message: "Você está a um dia ou mais sem editar o tanque", type_message: "warning", tank_id: tank.id)  
+        Notification.create(message: "Você está a um dia ou mais sem editar o tanque", type_message: "warning", tank_id: tank.id)
       end
     end
-  end    
+  end
+
+  def feed
+    id = params[:id]
+    tank =  Tank.find(id)
+    specie = Specie.find(tank.specie_id)
+    food_specie = FoodSpecie.find(specie.food_specie_id)
+    feed = tank.feeded + 1
+    puts feed
+    if feed + 1 <= food_specie.food_quantity
+      tank.update(feeded: feed)
+      render json: {success: true}
+    end
+    render json: {error: true} if tank.feeded + 1 > food_specie.food_quantity
+  end
 
   private
 
