@@ -16,7 +16,7 @@
       </a>
     </li>
 
-    <% if current_user.perfil_id == 1 %>
+    <% if current_user.perfil_id == 1 || current_user.perfil_id == 3 %>
       <li class="treeview">
         <a class="app-menu__item" href="#" data-toggle="treeview">
           <i class="app-menu__icon fa fa fa-list-ul"></i>
@@ -106,7 +106,7 @@
     </li>
 
 
-    <% if current_user.perfil_id == 1 %>
+    <% if current_user.perfil_id == 1 || current_user.perfil_id == 3 %>
 
       <li class="treeview">
         <a class="app-menu__item" href="#" data-toggle="treeview">
@@ -169,6 +169,24 @@
             <a class="treeview-item" href="/admin/new">
               <i class="icon fa fa-circle-o"></i>
               <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    <% end %>
+
+    <% if current_user.perfil_id == 3 %>
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa-unlock-alt"></i>
+          <span class="app-menu__label">Usuários</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/users/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Adicionar</span>
             </a>
           </li>
         </ul>

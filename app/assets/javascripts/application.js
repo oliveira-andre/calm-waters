@@ -20,21 +20,50 @@ $(document).on("turbolinks:load", function () {
         $(".cpf").unmask();
     });
 
+    $(".btn_create_user").click(function () {
+        $(".cpf").unmask();
+
+        var json = {
+            "name": $("#user_name").val(),
+            "cpf": $("#user_cpf").val(),
+            "perfil": $("#user_perfil_id").val(),
+            "password": $("#user_password").val(),
+        };
+        $.ajax({
+            url: "/users/create",
+            type: 'POST',
+            dataType: 'json',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+            },
+            data: "dados="+JSON.stringify(json),
+            success: function () {
+                notification("success", "Usuário cadastrado com sucesso");
+                location.reload();
+            },
+            erro: function () {
+                notification("error", "Verifique os campos");
+                location.reload();
+            }
+        });
+    });
+
     // create notifications every 5 seconds
-    setTimeout(function(){
+    setTimeout(function () {
         checkValues();
-     }, 5000);
+    }, 5000);
 
     //notification
-    for (var i = 0 ; i < notification_class.length; i++) {
+    for (var i = 0; i < notification_class.length; i++) {
         notification_class[i].addEventListener("click", notificationDismiss);
         return false
-    };
+    }
+    ;
 });
 
 
 //notification
-function notification(type, text){
+function notification(type, text) {
     for (i = 0, notification_class.length; i < notification_class.length; i++) {
         if (type == 'success') {
             notification_class[i].style.backgroundColor = '#34bfa3';
@@ -56,7 +85,7 @@ function notification(type, text){
 
 }
 
-function notificationDismiss(){
+function notificationDismiss() {
     for (i = 0, notification_class.length; i < notification_class.length; i++) {
         notification_class[i].style.visibility = 'hidden';
         notification_class[i].style.animation = '';
@@ -64,13 +93,13 @@ function notificationDismiss(){
 
 }
 
-function checkValues(){
+function checkValues() {
     $.ajax({
         url: "/tanks/find_date",
         type: 'POST',
         dataType: 'json',
-        beforeSend: function(xhr){
-            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
         },
     });
 
@@ -78,19 +107,19 @@ function checkValues(){
         url: "/ambiental_conditions/calc",
         type: 'POST',
         dataType: 'json',
-        beforeSend: function(xhr){
-            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
         },
     });
 }
 
-function changeViewNotification(id){
+function changeViewNotification(id) {
     $.ajax({
-        url: '/notifications/update_view/'+id,
+        url: '/notifications/update_view/' + id,
         type: 'POST',
         dataType: 'json',
-        beforeSend: function(xhr){
-            xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) );
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
         },
     });
 

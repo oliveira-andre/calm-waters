@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     post "/", to: "admin#create"
     patch ".:id", to: "admin#update"
   end
+  get "/users/new", to: "users#new"
+  get "/users", to: "users#index"
   get "/species", to: "species#index", as: "species"
   get "/species/new", to: "species#new", as: "new_specie"
   get "/species/edit/:id", to: "species#edit", as: "edit_species"
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
   post "/feed/:id", to: "tanks#feed"
   post "/check_alarms", to: "admin#catch_alarm"
   post "/dados_diarios", to: "tanks#insert_diary_data"
+  post "/users/create", to: "users#create"
   redirect("/users/sign_in")
 
   authenticate :user do
