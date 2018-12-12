@@ -1,5 +1,7 @@
 class AmbientalConditionsController < ApplicationController
   before_action :set_ambiental_condition, only: [:show, :edit, :update, :destroy]
+  skip_before_action :redirect_perfil, only: :calculate
+
 
   def index
     @ambiental_conditions = AmbientalCondition.all

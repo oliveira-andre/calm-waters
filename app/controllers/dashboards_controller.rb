@@ -1,4 +1,6 @@
 class DashboardsController < ApplicationController
+  skip_before_action :redirect_perfil
+
   def index
     @tanks = Tank.all
     @biomassa = 0

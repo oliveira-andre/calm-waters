@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  skip_before_action :redirect_perfil, only: :catch_alarm
+
   def index
     @alarms = Alarm.all
   end
