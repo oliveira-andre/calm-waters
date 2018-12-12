@@ -1,5 +1,6 @@
 class SoloSensorsController < ApplicationController
   before_action :set_solo_sensor, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_perfil
 
   def index
     @solo_sensors = SoloSensor.all
@@ -58,6 +59,15 @@ class SoloSensorsController < ApplicationController
   end
 
   private
+
+  def redirect_perfil
+    if user_signed_in?
+      if current_user.perfil_id != 1
+        redirect_to dashboards_path
+        flash[:error] = "Você não pode acessar essa URL"
+      end
+    end
+  end
 
   def set_solo_sensor
     @solo_sensor = SoloSensor.find(params[:id])

@@ -2,7 +2,6 @@ class TanksController < ApplicationController
   before_action :set_tank, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:insert_diary_data]
   skip_before_action :verify_authenticity_token, only: [:insert_diary_data]
-  skip_before_action :redirect_perfil
 
   def index
     @tanks = Tank.all

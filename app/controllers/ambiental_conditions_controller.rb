@@ -1,5 +1,6 @@
 class AmbientalConditionsController < ApplicationController
   before_action :set_ambiental_condition, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_perfil
   skip_before_action :redirect_perfil, only: :calculate
 
 
@@ -185,6 +186,15 @@ class AmbientalConditionsController < ApplicationController
   end
 
   private
+
+  def redirect_perfil
+    if user_signed_in?
+      if current_user.perfil_id != 1
+        redirect_to dashboards_path
+        flash[:error] = "Você não pode acessar essa URL"
+      end
+    end
+  end
 
   def set_ambiental_condition
     @ambiental_condition = AmbientalCondition.find(params[:id])

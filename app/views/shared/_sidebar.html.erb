@@ -16,70 +16,72 @@
       </a>
     </li>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa fa-list-ul"></i>
-        <span class="app-menu__label">Tipos de Ração</span>
-        <i class="treeview-indicator fa fa-angle-right"></i></a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/food_types">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/food_types/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+    <% if current_user.perfil_id == 1 %>
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa fa-list-ul"></i>
+          <span class="app-menu__label">Tipos de Ração</span>
+          <i class="treeview-indicator fa fa-angle-right"></i></a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/food_types">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/food_types/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-file-text"></i>
-        <span class="app-menu__label">Ração da Espécie</span>
-        <i class="treeview-indicator fa fa-angle-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/food_species">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/food_species/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa-file-text"></i>
+          <span class="app-menu__label">Ração da Espécie</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/food_species">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/food_species/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa fa-th-large"></i>
-        <span class="app-menu__label">Espécies</span>
-        <i class="treeview-indicator fa fa-angle-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/species">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/species/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa fa-th-large"></i>
+          <span class="app-menu__label">Espécies</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/species">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/species/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    <% end %>
 
     <li class="treeview">
       <a class="app-menu__item" href="#" data-toggle="treeview">
@@ -103,70 +105,74 @@
       </ul>
     </li>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa fa-area-chart"></i>
-        <span class="app-menu__label">Monitoramento</span>
-        <i class="treeview-indicator fa fa-angle-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/monitoring_histories">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/monitoring_histories/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-snowflake-o"></i>
-        <span class="app-menu__label">Condição Ambiental</span>
-        <i class="treeview-indicator fa fa-angle-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/ambiental_conditions">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/ambiental_conditions/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+    <% if current_user.perfil_id == 1 %>
 
-    <li class="treeview">
-      <a class="app-menu__item" href="#" data-toggle="treeview">
-        <i class="app-menu__icon fa fa-unlock-alt"></i>
-        <span class="app-menu__label">Painel Administrativo</span>
-        <i class="treeview-indicator fa fa-angle-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a class="treeview-item" href="/admin">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Listar</span>
-          </a>
-        </li>
-        <li>
-          <a class="treeview-item" href="/admin/new">
-            <i class="icon fa fa-circle-o"></i>
-            <span>Criar</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa fa-area-chart"></i>
+          <span class="app-menu__label">Monitoramento</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/monitoring_histories">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/monitoring_histories/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa-snowflake-o"></i>
+          <span class="app-menu__label">Condição Ambiental</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/ambiental_conditions">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/ambiental_conditions/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="app-menu__icon fa fa-unlock-alt"></i>
+          <span class="app-menu__label">Painel Administrativo</span>
+          <i class="treeview-indicator fa fa-angle-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a class="treeview-item" href="/admin">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Listar</span>
+            </a>
+          </li>
+          <li>
+            <a class="treeview-item" href="/admin/new">
+              <i class="icon fa fa-circle-o"></i>
+              <span>Criar</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    <% end %>
   </ul>
 </aside>

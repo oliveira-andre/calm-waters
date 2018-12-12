@@ -1,5 +1,6 @@
 class MonitoringHistoriesController < ApplicationController
   before_action :set_monitoring_history, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_perfil
 
   def index
     @monitoring_histories = MonitoringHistory.all
@@ -58,6 +59,15 @@ class MonitoringHistoriesController < ApplicationController
   end
 
   private
+
+  def redirect_perfil
+    if user_signed_in?
+      if current_user.perfil_id != 1
+        redirect_to dashboards_path
+        flash[:error] = "Você não pode acessar essa URL"
+      end
+    end
+  end
 
   def set_monitoring_history
     @monitoring_history = MonitoringHistory.find(params[:id])

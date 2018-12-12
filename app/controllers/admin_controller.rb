@@ -1,5 +1,7 @@
 class AdminController < ApplicationController
+  before_action :redirect_perfil
   skip_before_action :redirect_perfil, only: :catch_alarm
+
 
   def index
     @alarms = Alarm.all
@@ -38,4 +40,12 @@ class AdminController < ApplicationController
   def alarm_params
     params.require(:alarm).permit(:alarm_type_id, :active, :sound_effect, :message)
   end
+
+  def redirect_perfil
+    if current_user.perfil_id != 1
+      redirect_to dashboards_path
+      flash[:error] = "Você não pode acessar essa URL"
+    end
+  end
+
 end
