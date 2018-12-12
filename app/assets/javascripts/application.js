@@ -39,9 +39,9 @@ $(document).on("turbolinks:load", function () {
             data: "dados="+JSON.stringify(json),
             success: function () {
                 notification("success", "Usuário cadastrado com sucesso");
-                location.reload();
+                location.replace("/dashboards");
             },
-            erro: function () {
+            error: function () {
                 notification("error", "Verifique os campos");
                 location.reload();
             }

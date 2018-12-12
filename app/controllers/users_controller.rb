@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def create
     json = JSON.parse(params[:dados])
-    @user = User.new(name: json["name"], cpf: json["cpf"], perfil_id: json["perfil"], password: json["password"])
+    User.create(name: json["name"], cpf: json["cpf"], perfil_id: json["perfil"], password: json["password"])
   end
 
   private
