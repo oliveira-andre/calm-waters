@@ -84,7 +84,7 @@ class TanksController < ApplicationController
     food_specie = FoodSpecie.find(specie.food_specie_id)
     feed = tank.feeded + 1
     puts feed
-    if feed + 1 <= food_specie.food_quantity
+    if feed <= food_specie.food_quantity
       tank.update(feeded: feed)
       render json: {success: true}
     end

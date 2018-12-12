@@ -87,6 +87,12 @@ ActiveRecord::Schema.define(version: 2018_11_26_025644) do
     t.index ["tank_id"], name: "index_notifications_on_tank_id"
   end
 
+  create_table "perfils", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "solo_sensors", force: :cascade do |t|
     t.bigint "tank_id"
     t.string "calcium"
@@ -134,12 +140,14 @@ ActiveRecord::Schema.define(version: 2018_11_26_025644) do
     t.string "name", default: "", null: false
     t.string "cpf", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.bigint "perfil_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cpf"], name: "index_users_on_cpf", unique: true
+    t.index ["perfil_id"], name: "index_users_on_perfil_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -165,5 +173,6 @@ ActiveRecord::Schema.define(version: 2018_11_26_025644) do
   add_foreign_key "species", "food_species", column: "food_specie_id"
   add_foreign_key "tanks", "species", column: "specie_id"
   add_foreign_key "tanks", "users"
+  add_foreign_key "users", "perfils"
   add_foreign_key "water_sensors", "tanks"
 end

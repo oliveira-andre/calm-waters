@@ -6,6 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :name,              null: false, default: ""
       t.string :cpf,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.references :perfil, foreign_key: true
 
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
